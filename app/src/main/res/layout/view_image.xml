@@ -1,0 +1,6 @@
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/iv_image_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_size_100dp"
+    android:scaleType="centerCrop"
+    android:src="@mipmap/holder" />

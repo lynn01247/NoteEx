@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/rg_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal"
+        skin:enable="true">
+
+        <RelativeLayout
+            android:id="@+id/page1_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page1"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/category"
+                skin:enable="true" />
+
+            <ImageView
+                android:id="@+id/page1_0"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/category_c"
+                skin:enable="true" />
+
+            <TextView
+                android:id="@+id/page1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginTop="@dimen/margin_size_3dp"
+                android:text="笔记·心情"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/font_size_14sp"
+                skin:enable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/page2_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page2"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/lesson"
+                skin:enable="true" />
+
+            <ImageView
+                android:id="@+id/page2_0"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:alpha="0"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/lesson_c"
+                skin:enable="true" />
+
+            <TextView
+                android:id="@+id/page2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginTop="@dimen/margin_size_3dp"
+                android:text="分组·标签"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14sp"
+                skin:enable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <RelativeLayout
+            android:id="@+id/page3_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page3"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/comments"
+                skin:enable="true" />
+
+            <ImageView
+                android:id="@+id/page3_0"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:alpha="0"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/comments_c"
+                skin:enable="true" />
+
+            <tatait.com.noteex.util.CircleImageView
+                android:id="@+id/unreand_msg"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="@dimen/margin_size_18dp"
+                android:background="@color/red"
+                android:gravity="center_vertical"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/page3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginTop="@dimen/margin_size_3dp"
+                android:text="会话·内信"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14sp"
+                skin:enable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/page4_rl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/page4"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/share"
+                skin:enable="true" />
+
+            <ImageView
+                android:id="@+id/page4_0"
+                android:layout_width="@dimen/margin_size_28dp"
+                android:layout_height="@dimen/margin_size_28dp"
+                android:layout_centerHorizontal="true"
+                android:alpha="0"
+                android:paddingTop="@dimen/margin_size_2dp"
+                android:src="@drawable/share_c"
+                skin:enable="true" />
+
+            <TextView
+                android:id="@+id/page4_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/page4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginTop="@dimen/margin_size_3dp"
+                android:text="共享·圈子"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_14sp"
+                skin:enable="true" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_above="@id/rg_tab"
+        android:background="@android:color/darker_gray" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line_view" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/bottom_main_new_note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/rg_tab"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_size_8dp"
+        android:src="@drawable/notice"
+        android:transitionName="share"
+        app:elevation="4dp"
+        skin:enable="true" />
+</RelativeLayout>

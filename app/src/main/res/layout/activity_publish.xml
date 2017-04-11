@@ -1,0 +1,200 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/activity_publish_title_bar"
+        layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:id="@+id/activity_publish_ll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="@dimen/margin_size_10dp"
+        android:layout_marginRight="@dimen/margin_size_10dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_publish_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="标题"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/margin_size_7dp"
+            android:textColor="@color/color_textview"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_19sp" />
+
+        <LinearLayout
+            android:id="@+id/activity_publish_category_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_size_5dp"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_marginTop="@dimen/margin_size_2dp"
+                android:src="@drawable/category_publish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:gravity="start"
+                android:text="个人笔记: "
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_14sp" />
+
+            <TextView
+                android:id="@+id/activity_publish_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text=""
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_14sp" />
+
+            <TextView
+                android:id="@+id/activity_publish_nid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/activity_publish_tid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activity_publish_tag_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_size_5dp"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_marginTop="@dimen/margin_size_2dp"
+                android:src="@drawable/tag_publish" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:gravity="start"
+                android:text="标签: "
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_14sp" />
+
+            <TextView
+                android:id="@+id/activity_publish_tag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:text="无"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_14sp" />
+            <TextView
+                android:id="@+id/activity_publish_tagid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_1dp"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:layout_marginRight="@dimen/margin_size_10dp"
+            android:background="@color/gray_line" />
+
+        <EditText
+            android:id="@+id/activity_publish_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@color/color_textview"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_publish_keymay_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_30dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_1dp"
+            android:background="@color/gray_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_marginRight="@dimen/margin_size_20dp">
+
+            <ImageView
+                android:id="@+id/activity_publish_keymap_iv"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_marginLeft="@dimen/margin_size_20dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:src="@drawable/keymap_publish" />
+
+            <ImageView
+                android:id="@+id/activity_publish_pic_iv"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:layout_marginRight="@dimen/margin_size_40dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:src="@drawable/pic_publish" />
+
+            <ImageView
+                android:id="@+id/activity_publish_camela_iv"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:src="@drawable/camela_publish" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_1dp"
+            android:background="@color/gray_line" />
+    </LinearLayout>
+</LinearLayout>

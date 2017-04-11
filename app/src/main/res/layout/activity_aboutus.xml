@@ -1,0 +1,157 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/aboutus_layout_rl"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        skin:enable="true">
+
+        <LinearLayout
+            android:id="@+id/aboutus_layout_back"
+            android:layout_width="@dimen/margin_size_100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:src="@drawable/main_back_img" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp"
+                android:ellipsize="end"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/aboutus_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_size_40dp"
+            android:layout_marginRight="@dimen/margin_size_40dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray_white"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_20dp">
+
+            <LinearLayout
+                android:id="@+id/aboutus_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/margin_size_100dp"
+                    android:layout_height="@dimen/margin_size_100dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/aboutus_layout_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/font_size_16sp"
+                    android:layout_margin="@dimen/margin_size_20dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/aboutus_layout_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginLeft="@dimen/margin_size_10dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:text="开发者github网站：https://github.com/lynn01247"
+                        android:textSize="@dimen/font_size_17sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_0.1dp"
+                    android:layout_marginLeft="@dimen/margin_size_10dp"
+                    android:layout_marginRight="@dimen/margin_size_10dp"
+                    android:background="@color/layout_title_bg_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginLeft="@dimen/margin_size_10dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:text="开发者QQ：2443938389"
+                        android:textSize="@dimen/font_size_17sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_0.1dp"
+                    android:layout_marginLeft="@dimen/margin_size_10dp"
+                    android:layout_marginRight="@dimen/margin_size_10dp"
+                    android:background="@color/layout_title_bg_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginLeft="@dimen/margin_size_10dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:text="开发者邮箱：2443938389@qq.com"
+                        android:textSize="@dimen/font_size_17sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</LinearLayout>

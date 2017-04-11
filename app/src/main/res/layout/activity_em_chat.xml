@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_46dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        skin:enable="true">
+
+        <LinearLayout
+            android:id="@+id/title_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/title_layout_back_iv"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:src="@drawable/main_back_img" />
+
+            <TextView
+                android:id="@+id/title_layout_back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_toUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size_20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/re_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_64dp"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_size_10dp"
+            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:background="@color/colorPrimary"
+            android:padding="@dimen/margin_size_8dp"
+            android:text="发送"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size_20sp" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_size_10dp"
+            android:layout_toStartOf="@id/btn_send"
+            android:background="#f0f0f0"
+            android:hint="请输入内容"
+            android:paddingStart="@dimen/margin_size_10dp"
+            android:textSize="@dimen/font_size_18sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/re_bottom"
+        android:layout_below="@id/title"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="@dimen/margin_size_5dp"
+        android:listSelector="#00000000"
+        android:scrollbarStyle="outsideOverlay"
+        android:transcriptMode="normal" />
+</RelativeLayout>

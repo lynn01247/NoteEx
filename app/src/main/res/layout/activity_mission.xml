@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        skin:enable="true">
+
+        <LinearLayout
+            android:id="@+id/mission_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:src="@drawable/main_back_img" />
+
+            <TextView
+                style="@style/singleLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mission_layout_title"
+            style="@style/singleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_size_40dp"
+            android:layout_marginRight="@dimen/margin_size_40dp"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+        <TextView
+            android:id="@+id/mission_layout_right"
+            style="@style/singleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:text="关闭AD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </RelativeLayout>
+
+    <tatait.com.noteex.util.SwipeRefreshView
+        android:id="@+id/mission_swipe_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:id="@+id/mission_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:layout_marginStart="@dimen/margin_size_20dp" />
+    </tatait.com.noteex.util.SwipeRefreshView>
+</LinearLayout>

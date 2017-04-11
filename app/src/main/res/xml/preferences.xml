@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout="@layout/preference_item"
+    android:title="设置">
+
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="推送设置">
+        <CheckBoxPreference
+            android:key="push_notice"
+            android:layout="@layout/preference_item"
+            android:summary="向客户端推送系统通知\n开启或关闭该设置大约需要5分钟才能生效"
+            android:title="接收推送通知"
+            android:widgetLayout="@layout/switch_layout" />
+        <CheckBoxPreference
+            android:key="not_disturb"
+            android:layout="@layout/preference_item"
+            android:summary="免打扰模式下：\n收到通知消息时不响铃，不振动，不闪灯"
+            android:title="开启免打扰模式"
+            android:widgetLayout="@layout/switch_layout" />
+        <ListPreference
+            android:key="disturb_time"
+            android:summary="开启免打扰模式的时候生效"
+            android:defaultValue="3"
+            android:dialogTitle="设置免打扰时间段"
+            android:entries="@array/disturb_time_key"
+            android:entryValues="@array/disturb_time_value"
+            android:layout="@layout/preference_item"
+            android:title="设置免打扰时间段" >
+        </ListPreference>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:layout="@layout/preference_category_widget"
+        android:title="福利设置">
+        <CheckBoxPreference
+            android:key="pre_1024"
+            android:layout="@layout/preference_item"
+            android:summary="你懂的"
+            android:title="开启1024"
+            android:widgetLayout="@layout/switch_layout" />
+        <EditTextPreference
+            android:key="vip_txt"
+            android:title="输入VIP卡号"
+            android:layout="@layout/preference_item"
+            android:summary="屏蔽一切AD，享受绿色环境\n备注：开启1024状态下，方能生效"
+            android:dialogTitle="请输入VIP卡号"/>
+    </PreferenceCategory>
+</PreferenceScreen>

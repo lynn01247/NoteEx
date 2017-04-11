@@ -1,0 +1,92 @@
+<cn.bingoogolapple.refreshlayout.BGARefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    style="@style/MatchMatch"
+    android:paddingBottom="@dimen/test_padding_margin"
+    android:paddingTop="@dimen/test_padding_margin">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/fragment_list_tip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:background="@color/main_bg_tab"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:gravity="center"
+                android:text="长按可以进行删除,收藏,分享等操作哦... ^_^ "
+                android:textColor="@color/main_bgtext_tab"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <tatait.com.noteex.util.CircleImageView
+                android:id="@+id/fragment_list_del"
+                android:layout_width="@dimen/margin_size_30dp"
+                android:layout_height="@dimen/margin_size_30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginEnd="@dimen/margin_size_10dp"
+                android:layout_marginTop="@dimen/margin_size_2dp"
+                android:alpha="0.4"
+                android:src="@drawable/del" />
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/data"
+            style="@style/MatchMatch"
+            android:layout_below="@id/fragment_list_tip"
+            android:layout_marginBottom="@dimen/test_padding_margin"
+            android:background="@android:color/white"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/test_padding_margin"
+            android:paddingTop="@dimen/test_padding_margin"
+            android:scrollbars="none"
+            tools:listitem="@layout/item_normal"
+            android:visibility="visible"/>
+        <RelativeLayout
+            android:id="@+id/fragment_no_data"
+            android:layout_below="@id/fragment_list_tip"
+            android:layout_above="@id/data"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            style="@style/MatchMatch"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/no_data_tip_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="暂无笔记哦, 赶快新建笔记上传吧!"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_size_20dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_below="@id/no_data_tip_tv">
+                <Button
+                    android:id="@+id/no_data_tip_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="立即新建"
+                    android:textColor="@color/colorAccent"
+                    android:background="@drawable/corner_blue_color_5dp"
+                    android:textSize="@dimen/font_size_18sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</cn.bingoogolapple.refreshlayout.BGARefreshLayout>

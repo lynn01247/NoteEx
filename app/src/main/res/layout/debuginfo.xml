@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/debug_info_top_bar"
+        layout="@layout/title_layout"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/debug_info_tv"
+        android:layout_below="@id/debug_info_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="NoteEx"
+        android:textSize="@dimen/font_size_20sp"
+        android:textStyle="bold" />
+</RelativeLayout>

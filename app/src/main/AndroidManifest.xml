@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="tatait.com.noteex">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <!-- 添加快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <!-- 移除快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <!-- 查询快捷方式 -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
+
+    <uses-sdk android:minSdkVersion="8" tools:overrideLibrary="com.umeng.socialize.evernote,com.umeng.socialize.pinterest"/>
+
+    <application
+        android:name="tatait.com.noteex.widget.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon">
+        <activity
+            android:name="tatait.com.noteex.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="tatait.com.noteex.NewNoteActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="tatait.com.noteex.NewNoteTreeActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name="tatait.com.noteex.NewNoteTagActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <!--接入任意广告（Banner、应用墙、插屏、原生）-->
+        <service android:name="com.qq.e.comm.DownloadService" android:exported="false" />
+        <activity android:name="com.qq.e.ads.ADActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+
+        <activity android:name="tatait.com.noteex.WelcomeActivity" />
+        <activity android:name="tatait.com.noteex.ImageDetailsActivity" />
+        <activity android:name="tatait.com.noteex.PicDetailActivity" />
+        <activity android:name="tatait.com.noteex.ReadDetailActivity" />
+        <activity android:name="tatait.com.noteex.ReadActivity" />
+        <activity android:name="tatait.com.noteex.FuliActivity" />
+        <activity android:name="tatait.com.noteex.SettingActivity" />
+        <activity android:name="tatait.com.noteex.ThemeActivity" />
+        <activity android:name="tatait.com.noteex.LabActivity" />
+        <activity android:name="tatait.com.noteex.NoticeActivity" />
+        <activity android:name="tatait.com.noteex.AboutUsActivity" />
+        <activity android:name="tatait.com.noteex.FeekBackActivity" />
+        <activity android:name="tatait.com.noteex.CollectActivity" />
+        <activity android:name="tatait.com.noteex.NoteByGroupActivity" />
+        <activity android:name="tatait.com.noteex.NoteTreeActivity" />
+        <activity android:name="tatait.com.noteex.ViewPagerActivity" />
+        <activity android:name="tatait.com.noteex.MainActivity" />
+        <activity android:name="tatait.com.noteex.WebActivity" />
+        <activity android:name="tatait.com.noteex.GuideActivity" />
+        <activity android:name="tatait.com.noteex.GuideLightActivity" />
+        <activity android:name="tatait.com.noteex.LoginActivity" />
+        <activity android:name="tatait.com.noteex.UserInfoActivity" />
+        <activity android:name="tatait.com.noteex.LogInfoActivity" />
+
+        <activity android:name="tatait.com.noteex.EmChatActivity" />
+        <activity android:name="tatait.com.noteex.EmNewFriendsMsgActivity" />
+
+        <receiver android:name=".widget.UpdateAppReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+            </intent-filter>
+        </receiver>
+        <!-- *************************     related to Share BEG **************************** -->
+        <activity
+            android:name="com.umeng.socialize.editorpage.ShareActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.UMDefault"/>
+        <!-- wechat callback-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <!-- tencent -->
+        <activity
+            android:name="com.umeng.qq.tencent.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data android:scheme="tencent1105942981"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.umeng.qq.tencent.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <uses-library
+            android:name="com.google.android.maps"
+            android:required="false"/>
+        <uses-library android:name="android.test.runner"/>
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58b7b4a1aed1792583001db3">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="056e23923ccbb82a7fd2ac82644536a4">
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="UMENG_CHANNEL">
+        </meta-data>
+        <!-- *************************     related to Share END **************************** -->
+
+        <!-- 设置环信应用的appkey -->
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="lynn01247#noteex" />
+        <!-- 设置环信应用的AppKey -->
+        <!-- 声明SDK所需的service SDK核心功能 -->
+        <service
+            android:name="com.hyphenate.chat.EMChatService"
+            android:exported="true" />
+        <!-- 声明SDK所需的receiver -->
+        <receiver android:name="com.hyphenate.chat.EMMonitorReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+            <!-- 可选filter -->
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

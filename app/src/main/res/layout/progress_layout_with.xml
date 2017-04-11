@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/dialog_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dip"
+    android:paddingLeft="15dip"
+    android:paddingRight="15dip"
+    android:paddingTop="10dip">
+
+    <ImageView
+        android:id="@+id/person_image_activity_load"
+        android:layout_width="@dimen/margin_size_50dp"
+        android:layout_height="@dimen/margin_size_50dp"
+        android:background="@drawable/load" />
+
+    <TextView
+        android:id="@+id/text_progress"
+        style="@style/text_content_style"
+        android:layout_marginTop="10dip"
+        android:text="正在加载..."
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_16sp" />
+</LinearLayout>

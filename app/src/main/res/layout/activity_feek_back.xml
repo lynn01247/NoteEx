@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/feekback_activity_title_layout"
+        layout="@layout/title_layout" />
+
+    <EditText
+        android:id="@+id/feekback_activity_phone_edi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_10dp"
+        android:background="@drawable/edittext_corner_grad_bg"
+        android:hint="请填写您的联系方式(QQ或邮箱)[选填]"
+        android:inputType="phone"
+        android:padding="@dimen/margin_size_10dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="@color/dimgray"
+        android:textSize="@dimen/font_size_12sp" />
+
+    <EditText
+        android:id="@+id/feekback_activity_content_edi"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_100dp"
+        android:layout_marginLeft="@dimen/margin_size_10dp"
+        android:layout_marginRight="@dimen/margin_size_10dp"
+        android:background="@drawable/edittext_corner_grad_bg"
+        android:gravity="top"
+        android:hint="请填上您的宝贵意见!"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/margin_size_10dp"
+        android:textColor="@color/dimgray"
+        android:textSize="@dimen/font_size_12sp" />
+
+    <Button
+        android:id="@+id/feekback_activity_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_size_15dp"
+        android:background="@color/colorPrimary"
+        android:padding="@dimen/margin_size_10dp"
+        android:text="提 交"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_18sp"
+        skin:enable="true"/>
+</LinearLayout>

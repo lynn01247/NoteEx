@@ -1,0 +1,221 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_tab"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/user_info_top_bar"
+        layout="@layout/title_layout"
+        android:background="@color/colorPrimary" />
+
+    <FrameLayout
+        android:id="@+id/layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/nav_main_collect"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_50dp"
+                    android:layout_marginTop="@dimen/margin_size_15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_30dp"
+                        android:layout_height="@dimen/margin_size_30dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:src="@drawable/umeng_socialize_qq" />
+
+                    <View
+                        android:layout_width="@dimen/margin_size_0.1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:background="@color/gray_dark"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/user_info_qq"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.6"
+                        android:gravity="left|center"
+                        android:text="未登录"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_size_17dp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:src="@drawable/umeng_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_main_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_50dp"
+                    android:layout_marginTop="@dimen/margin_size_15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_30dp"
+                        android:layout_height="@dimen/margin_size_30dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:src="@drawable/umeng_socialize_sina" />
+
+                    <View
+                        android:layout_width="@dimen/margin_size_0.1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:background="@color/gray_dark"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/user_info_sina"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.6"
+                        android:gravity="left|center"
+                        android:text="未登录"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_size_17dp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:src="@drawable/umeng_arrow" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/nav_main_advice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_size_50dp"
+                    android:layout_marginTop="@dimen/margin_size_15dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_30dp"
+                        android:layout_height="@dimen/margin_size_30dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:src="@drawable/umeng_socialize_wechat" />
+
+                    <View
+                        android:layout_width="@dimen/margin_size_0.1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="@dimen/margin_size_10dp"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:background="@color/gray_dark"
+                        android:layerType="software" />
+
+                    <TextView
+                        android:id="@+id/user_info_wechat"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_weight="1"
+                        android:alpha="0.6"
+                        android:gravity="left|center"
+                        android:text="未登录"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/margin_size_17dp" />
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_15dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:src="@drawable/umeng_arrow" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/nav_main_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_size_20dp"
+                    android:layout_marginTop="@dimen/margin_size_15dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/margin_size_50dp"
+                        android:layout_height="@dimen/margin_size_50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_size_10dp"
+                        android:src="@drawable/logout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="退出登录"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/font_size_17sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <FrameLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_250dp"
+            android:background="@drawable/nva_bg_xml"
+            android:visibility="gone">
+
+            <tatait.com.noteex.util.CircleImageView
+                android:id="@+id/header_image"
+                android:layout_width="@dimen/margin_size_80dp"
+                android:layout_height="@dimen/margin_size_80dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/margin_size_45dp"
+                android:src="@drawable/icon_user_img" />
+
+            <TextView
+                android:id="@+id/header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/margin_size_10dp"
+                android:text="未登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_19sp" />
+        </FrameLayout>
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/nav_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/actionBarSize"
+            android:elevation="@dimen/margin_size_4dp" />
+    </FrameLayout>
+</LinearLayout>

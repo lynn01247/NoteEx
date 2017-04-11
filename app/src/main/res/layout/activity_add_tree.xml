@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg_tab"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/activity_add_tree_title_bar"
+        layout="@layout/title_layout" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="新文件夹名称"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"/>
+    <LinearLayout
+        android:id="@+id/activity_add_tree_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_add_tree_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:layout_marginRight="@dimen/margin_size_10dp"
+            android:padding="@dimen/margin_size_7dp"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="请填写新文件夹名称"
+            android:textColor="@color/color_textview"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_18sp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:imeOptions="actionNext"/>
+    </LinearLayout>
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="父文件夹"
+    android:layout_marginTop="@dimen/margin_size_10dp"
+    android:layout_marginBottom="@dimen/margin_size_10dp"
+    android:layout_marginStart="@dimen/margin_size_20dp"/>
+        <LinearLayout
+            android:id="@+id/activity_add_tree_category_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            android:layout_marginBottom="@dimen/margin_size_5dp"
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="@dimen/margin_size_20dp"
+                android:layout_marginTop="@dimen/margin_size_10dp"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:src="@drawable/category_publish" />
+
+            <TextView
+                android:id="@+id/activity_add_tree_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:text="/根文件夹/"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="end"
+                android:layout_marginEnd="@dimen/margin_size_20dp"
+                android:text=">"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="@dimen/font_size_19sp" />
+
+            <TextView
+                android:id="@+id/activity_add_tree_tid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+        </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="通过选择父文件夹来创建相应的子文件夹"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"/>
+    </LinearLayout>

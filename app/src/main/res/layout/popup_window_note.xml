@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pop_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_size_10dp"
+        android:text="排序方式"
+        android:textColor="@color/actionsheet_gray"
+        android:textSize="@dimen/font_size_15sp" />
+
+    <RelativeLayout
+        android:id="@+id/sore_rl1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_40dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/sore_create"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_size_20dp"
+            android:text="创建日期"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <ImageView
+            android:id="@+id/sore_create_iv"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:src="@drawable/popup_check" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sore_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_40dp"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/sore_update"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_size_20dp"
+            android:text="修改日期"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <ImageView
+            android:id="@+id/sore_update_iv"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:src="@drawable/popup_check"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_size_10dp"
+        android:text="加载条数"
+        android:textColor="@color/actionsheet_gray"
+        android:textSize="@dimen/font_size_15sp"/>
+
+    <RelativeLayout
+        android:id="@+id/see_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/see_show"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_size_20dp"
+            android:text="10条/页"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <ImageView
+            android:id="@+id/see_show_iv"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:src="@drawable/popup_check"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/see_rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/see_show2"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_size_20dp"
+            android:text="20条/页"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <ImageView
+            android:id="@+id/see_show_iv2"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:src="@drawable/popup_check"
+            android:visibility="gone"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/see_rl3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/see_show3"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/margin_size_20dp"
+            android:text="40条/页"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <ImageView
+            android:id="@+id/see_show_iv3"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:src="@drawable/popup_check"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

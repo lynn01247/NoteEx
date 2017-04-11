@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/page6">
+
+        <TextView
+            android:id="@+id/loadText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="NoteEx"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold|italic"
+            android:typeface="serif" />
+
+        <LinearLayout
+            android:id="@+id/three_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/load_zidingyi_sms"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_size_25dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="自定义短信验证登录"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/font_size_15sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/load_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_size_50dp"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_size_0.1dp"
+                    android:layout_marginStart="@dimen/margin_size_20dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/line_color" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="社交账号登录"
+                    android:textColor="@color/lightgray"
+                    android:textSize="@dimen/font_size_20sp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/margin_size_0.1dp"
+                    android:layout_marginEnd="@dimen/margin_size_20dp"
+                    android:layout_weight="0.7"
+                    android:background="@color/line_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/load_view"
+                android:layout_marginBottom="@dimen/margin_size_100dp"
+                android:layout_marginLeft="@dimen/margin_size_50dp"
+                android:layout_marginRight="@dimen/margin_size_50dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/wechat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_size_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <tatait.com.noteex.util.CircleImageView
+                        android:layout_width="@dimen/margin_size_50dp"
+                        android:layout_height="@dimen/margin_size_50dp"
+                        android:gravity="center"
+                        android:src="@drawable/umeng_socialize_wechat" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/QQ"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_size_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <tatait.com.noteex.util.CircleImageView
+                        android:layout_width="@dimen/margin_size_50dp"
+                        android:layout_height="@dimen/margin_size_50dp"
+                        android:gravity="center"
+                        android:src="@drawable/umeng_socialize_qq" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sina"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_size_20dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <tatait.com.noteex.util.CircleImageView
+                        android:layout_width="@dimen/margin_size_50dp"
+                        android:layout_height="@dimen/margin_size_50dp"
+                        android:src="@drawable/umeng_socialize_sina" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/three_login"
+            android:layout_marginBottom="@dimen/margin_size_50dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_size_20dp"
+                android:layout_marginStart="@dimen/margin_size_20dp"
+                android:background="@drawable/umeng_btnbg"
+                android:paddingBottom="@dimen/margin_size_6dp"
+                android:paddingEnd="@dimen/margin_size_12dp"
+                android:paddingStart="@dimen/margin_size_12dp"
+                android:paddingTop="@dimen/margin_size_6dp"
+                android:text="注册"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_size_20dp"
+                android:layout_marginStart="@dimen/margin_size_20dp"
+                android:background="@drawable/umeng_btnbg"
+                android:paddingBottom="@dimen/margin_size_6dp"
+                android:paddingEnd="@dimen/margin_size_12dp"
+                android:paddingStart="@dimen/margin_size_12dp"
+                android:paddingTop="@dimen/margin_size_6dp"
+                android:text="登录"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_20sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <include
+        android:id="@+id/app_main_top_bar"
+        layout="@layout/title_layout" />
+</FrameLayout>

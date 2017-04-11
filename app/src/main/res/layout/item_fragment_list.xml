@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tatait.com.noteex.util.RippleView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:id="@+id/tv_item_fragment_list_ripple"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <tatait.com.noteex.util.CircleImageView
+        android:id="@+id/item_fragment_list_user_img"
+        android:layout_width="@dimen/margin_size_50dp"
+        android:layout_height="@dimen/margin_size_50dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:gravity="center"
+        android:src="@drawable/icon_user_img" />
+
+    <TextView
+        android:id="@+id/item_fragment_list_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/margin_size_50dp"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:layout_toEndOf="@id/item_fragment_list_user_img"
+        android:gravity="center"
+        android:text="昵称"
+        android:textColor="@color/actionsheet_red"
+        android:textSize="@dimen/font_size_17sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/item_fragment_note_collect"
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_size_10dp"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:src="@drawable/has_collect"
+            android:visibility="gone"
+            skin:enable="true"/>
+
+        <ImageView
+            android:id="@+id/item_fragment_note_shared"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            android:layout_marginEnd="@dimen/margin_size_10dp"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:layout_toLeftOf="@id/item_fragment_note_collect"
+            android:src="@drawable/has_shared"
+            android:visibility="gone"
+            skin:enable="true"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/item_fragment_list_user"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_0.1dp"
+        android:layout_below="@id/item_fragment_list_user_img"
+        android:layout_marginEnd="@dimen/margin_size_200dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:background="@drawable/gray_button_background"
+        android:layerType="software" />
+
+    <TextView
+        android:id="@+id/tv_item_fragment_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_fragment_list_user"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:text="标题"
+        android:textColor="@color/main_text"
+        android:textSize="@dimen/font_size_20sp" />
+
+    <TextView
+        android:id="@+id/tv_item_fragment_list_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_fragment_list_title"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:text="2017-02-09 10:00:00"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/font_size_16sp" />
+
+    <TextView
+        android:id="@+id/tv_item_fragment_list_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_fragment_list_title"
+        android:layout_marginStart="@dimen/margin_size_10dp"
+        android:layout_toEndOf="@id/tv_item_fragment_list_time"
+        android:text="/默认/"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="@dimen/font_size_16sp" />
+
+    <TextView
+        android:id="@+id/tv_item_fragment_list_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_item_fragment_list_time"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_7dp"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="详细内容"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/font_size_18sp" />
+    <LinearLayout
+        android:id="@+id/item_fragment_list_num"
+        android:layout_below="@id/tv_item_fragment_list_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/margin_size_20dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_20dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            android:src="@drawable/view_count"
+            android:alpha="0.3"/>
+        <TextView
+            android:id="@+id/view_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_marginStart="@dimen/margin_size_4dp"
+            android:text="10"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/font_size_18sp" />
+        <ImageView
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:src="@drawable/collect_count"
+            android:alpha="0.3"/>
+        <TextView
+            android:id="@+id/collect_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="10"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/font_size_18sp" />
+        <ImageView
+            android:layout_width="@dimen/margin_size_20dp"
+            android:layout_height="@dimen/margin_size_20dp"
+            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:src="@drawable/praise_count"
+            android:alpha="0.3"/>
+        <TextView
+            android:id="@+id/praise_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_size_4dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="10"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/tv_item_fragment_list_delete"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_0.1dp"
+        android:layout_below="@id/item_fragment_list_num"
+        android:layout_marginEnd="@dimen/margin_size_20dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_3dp"
+        android:background="@color/actionsheet_blue"
+        android:layerType="software" />
+</tatait.com.noteex.util.RippleView>

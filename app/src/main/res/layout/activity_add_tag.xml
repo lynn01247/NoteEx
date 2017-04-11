@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_tab"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/activity_add_tag_title_bar"
+        layout="@layout/title_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:text="新标签名称" />
+
+    <LinearLayout
+        android:id="@+id/activity_add_tag_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_add_tag_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:layout_marginRight="@dimen/margin_size_10dp"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:background="@null"
+            android:gravity="start"
+            android:hint="请填写标签名称"
+            android:imeOptions="actionNext"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="@dimen/margin_size_7dp"
+            android:textColor="@color/color_textview"
+            android:textColorHint="@color/gray"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_add_tag_list_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_size_10dp"
+            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:text="已有标签" />
+
+        <TextView
+            android:id="@+id/activity_add_tag_tid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_size_5dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/list_tag"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/blue_light"
+                android:dividerHeight="@dimen/margin_size_0.1dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

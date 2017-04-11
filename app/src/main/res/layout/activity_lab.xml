@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        skin:enable="true">
+
+        <LinearLayout
+            android:id="@+id/title_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/title_layout_back_iv"
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:src="@drawable/main_back_img" />
+
+            <TextView
+                android:id="@+id/title_layout_back_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_17sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="实验室"
+            android:textColor="#fff"
+            android:textSize="@dimen/font_size_20sp" />
+    </RelativeLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/pop_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f2f2f2"
+            android:padding="@dimen/margin_size_10dp"
+            android:text="首页标题特效"
+            android:textColor="@color/actionsheet_gray"
+            android:textSize="@dimen/font_size_15sp" />
+
+        <RelativeLayout
+            android:id="@+id/lab_scale_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_scale"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Scale（淡入淡出）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_scale_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_evaporate_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_evaporate"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Evaporate（蒸发）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_evaporate_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_fall_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_fall"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Fall（剥落）  [默认]"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_fall_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_anvil_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_anvil"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Anvil（千锤百炼）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_anvil_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_line_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_line"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Line（线性美）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_line_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_typer_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_typer"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="Typer（印刷机）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_typer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/lab_rainbow_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/lab_rainbow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="rainbow（五彩缤纷）"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/lab_rainbow_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f2f2f2"
+            android:padding="@dimen/margin_size_10dp"
+            android:text="字体"
+            android:textColor="@color/actionsheet_gray"
+            android:textSize="@dimen/font_size_15sp" />
+
+        <RelativeLayout
+            android:id="@+id/front_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/front"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="默认"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/front_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray_line"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未使用"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/front1_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/front1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="时尚细黑"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/front1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未下载"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/front2_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/front2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="大梁体"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/front2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未下载"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/front3_rl"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:background="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/front3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin_size_40dp"
+                android:gravity="center"
+                android:paddingStart="@dimen/margin_size_20dp"
+                android:text="微软雅黑"
+                android:textColor="@color/actionsheet_blue"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <TextView
+                android:id="@+id/front3_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_size_5dp"
+                android:layout_marginEnd="@dimen/margin_size_30dp"
+                android:layout_marginTop="@dimen/margin_size_5dp"
+                android:background="@color/gray"
+                android:gravity="center"
+                android:padding="@dimen/margin_size_5dp"
+                android:text="未下载"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

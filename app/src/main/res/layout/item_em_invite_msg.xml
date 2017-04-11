@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/margin_size_64dp"
+    android:background="#f0f0f0"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/margin_size_48dp"
+        android:layout_height="@dimen/margin_size_48dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/margin_size_13dp"
+        android:src="@drawable/em_default_avatar" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/margin_size_10dp"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:text="昵称"
+        android:textColor="#000"
+        android:textSize="@dimen/font_size_18sp" />
+
+    <TextView
+        android:id="@+id/tv_reason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin_size_10dp"
+        android:layout_toEndOf="@id/iv_avatar"
+        android:text="加为好友"
+        android:textColor="#999999"
+        android:textSize="@dimen/font_size_16sp" />
+
+    <Button
+        android:id="@+id/btn_agree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/margin_size_13dp"
+        android:text="同意"
+        android:textColor="#999999"
+        android:textSize="@dimen/font_size_16sp" />
+</RelativeLayout>

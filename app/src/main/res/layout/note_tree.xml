@@ -1,0 +1,60 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg_tab"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        android:id="@+id/note_tree_title_bar"
+        layout="@layout/title_layout" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:text="当前文件夹" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/note_tree_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_40dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:gravity="center"
+            android:text="跟文件夹"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_size_10dp"
+        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginTop="@dimen/margin_size_10dp"
+        android:text="所有文件夹" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/note_tree"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/blue_light"
+            android:dividerHeight="@dimen/margin_size_0.1dp" />
+    </LinearLayout>
+</LinearLayout>

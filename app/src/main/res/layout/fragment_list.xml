@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contacts_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <RelativeLayout
+        android:id="@+id/fragment_list_tip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_size_30dp"
+        android:background="@color/main_bg_tab"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_size_10dp"
+            android:gravity="center"
+            android:text="长按可以进行删除,重命名等操作哦... ^_^ "
+            android:textColor="@color/main_bgtext_tab"
+            android:textSize="@dimen/font_size_18sp" />
+        <tatait.com.noteex.util.CircleImageView
+            android:id="@+id/fragment_list_del"
+            android:layout_width="@dimen/margin_size_30dp"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/margin_size_10dp"
+            android:layout_marginTop="@dimen/margin_size_2dp"
+            android:layout_marginBottom="@dimen/margin_size_2dp"
+            android:alpha="0.4"
+            android:src="@drawable/del" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/id_tree"
+        android:layout_below="@id/fragment_list_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/blue_light"
+        android:dividerHeight="@dimen/margin_size_0.1dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/list_no_data_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_tree"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="还没有标签..."
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_size_20dp"
+            android:gravity="center"
+            android:text="点击 + , 可以新增标签 ;"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="创建/打开笔记, 点击编辑, 可以分配标签 !"
+            android:textColor="@color/actionsheet_blue"
+            android:textSize="@dimen/font_size_18sp" />
+    </LinearLayout>
+</RelativeLayout>

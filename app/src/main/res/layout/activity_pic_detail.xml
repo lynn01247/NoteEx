@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:gravity="center_vertical"
+        skin:enable="true">
+
+        <LinearLayout
+            android:id="@+id/pic_detail_layout_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/margin_size_20dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:src="@drawable/main_back_img" />
+
+            <TextView
+                style="@style/singleLine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="返回"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/pic_detail_layout_title"
+            style="@style/singleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_size_40dp"
+            android:layout_marginRight="@dimen/margin_size_40dp"
+            android:text="图片区"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+
+        <TextView
+            android:id="@+id/pic_layout_right"
+            style="@style/singleLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:text="关闭AD"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/main_bpng">
+        <TextView
+            android:id="@+id/pic_detail_layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_size_30dp"
+            android:gravity="center|right"
+            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:text="2017-03-01"
+            android:textColor="@color/gray_line"
+            android:textSize="@dimen/font_size_15sp"/>
+        <tatait.com.noteex.util.MyScrollView
+            android:id="@+id/my_scroll_view"
+            android:layout_below="@id/pic_detail_layout_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/first_column"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_column"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/third_column"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+
+        </tatait.com.noteex.util.MyScrollView>
+    </RelativeLayout>
+</LinearLayout>
