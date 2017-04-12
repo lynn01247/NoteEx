@@ -1,31 +1,34 @@
 # NoteEx
 
-## 超级笔记Android客户端  基于Material Design设计模式、嵌有轻量级的IM框架（环信）
+### 超级笔记Android客户端  
+### 基于Material Design设计模式、嵌有轻量级的IM框架（环信）
 
 ## 效果图
 
-#整体效果
-<img src="http://omzogcv8w.bkt.clouddn.com/main.gif" title="" width="588" height="981" /> <br>
+### 整体效果
 
-#实验室效果：在线和本地换肤、在线和本地字体更换
-<img src="http://omzogcv8w.bkt.clouddn.com/second.gif" title="" width="588" height="981" /> <br>
+<img src="/screen/main.gif" title="" width="270" height="486" /> <br>
 
-#其他功能效果
-<img src="http://omzogcv8w.bkt.clouddn.com/user.png" width="588" height="981" title=""><br>
+### 实验室效果：在线和本地换肤、在线和本地字体更换
 
-<img src="http://omzogcv8w.bkt.clouddn.com/tag.png" width="588" height="981" title="">
+<img src="/screen/second.gif" title="" width="270" height="486" /> <br>
 
-<img src="http://omzogcv8w.bkt.clouddn.com/talk.png" width="588" height="981" title="">
+### 其他功能效果
+<img src="http://omzogcv8w.bkt.clouddn.com/user.png" width="270" height="486" title=""><br>
 
-<img src="http://omzogcv8w.bkt.clouddn.com/share.png" width="588" height="981" title="">
+<img src="http://omzogcv8w.bkt.clouddn.com/tag.png" width="270" height="486" title="">
 
-<img src="http://omzogcv8w.bkt.clouddn.com/right.png" width="588" height="981" title="">
+<img src="http://omzogcv8w.bkt.clouddn.com/talk.png" width="270" height="486" title="">
 
-<img src="http://omzogcv8w.bkt.clouddn.com/setting.png" width="588" height="981" title="">
+<img src="http://omzogcv8w.bkt.clouddn.com/share.png" width="270" height="486" title="">
+
+<img src="http://omzogcv8w.bkt.clouddn.com/right.png" width="270" height="486" title="">
+
+<img src="http://omzogcv8w.bkt.clouddn.com/setting.png" width="270" height="486" title="">
 
 ## 数据来源API接口 ##
 
-##1. 数据是自己写的后台，后台搭建在LeanCloud【非广告：这是免费的轻量级后台管理维护系统，可以基于Java、PHP等语言，具体信息请移步官网：https://leancloud.cn/】
+### 1. 数据是自己写的后台，后台搭建在LeanCloud【非广告：这是免费的轻量级后台管理维护系统，可以基于Java、PHP等语言，具体信息请移步官网：https://leancloud.cn/】
 
 部分接口示例:【更多信息，可以访问我当时开发另一个项目使用的API文档，本项目也是挂载在这个数据库里（懒得新建啦 ^_^ ）https://lynn01247.gitbooks.io/turtle_api_1-0/content/】
 -----------------------------------------------------------------------------
@@ -89,8 +92,8 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
 });
 -----------------------------------------------------------------------------
 
-##2. 部分干货数据是基于PHP爬虫实现，当用户访问APP请求最新数据时，自动去抓取【掘金】最新的数据。部分图片数据和主题字体等存于七牛
-##3. 由于掘金对接口访问采用【X-LC-Id】 + 【X-LC-Sign】认证方式，因此我将Sign搁置于友盟在线参数。
+## 2. 部分干货数据是基于PHP爬虫实现，当用户访问APP请求最新数据时，自动去抓取【掘金】最新的数据。部分图片数据和主题字体等存于七牛
+## 3. 由于掘金对接口访问采用【X-LC-Id】 + 【X-LC-Sign】认证方式，因此我将Sign搁置于友盟在线参数。
 
 笔记Model的数据Json格式:
 ```
@@ -144,11 +147,16 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
 ## 部分依赖的开源库和工具
 
 下拉刷新上拉加载[BGARefreshLayout](https://github.com/ylligang118/BGARefreshLayout-Android)
+
 网络请求[okhttp](技术博客:http://blog.csdn.net/lmj623565791/article/details/47911083)
+
 强大的图片处理工具[picasso](https://github.com/square/picasso)
+
 炫酷的文字特效[htextview](https://github.com/hanks-zyh/HTextView)不过：minSdkVersion要15
+
 主题切换一直是个功能要点，网上有许许多多的方式，不是操作太复杂，批量更换；就是效果不如意。
 找了个比较满意的[ThemeSkinning](https://github.com/burgessjp/ThemeSkinning)
+
 
 ## 写在最后
 这个项目前前后后花了较多的时间，因为是自己练手的项目，在工作之余修修补补，功能要求也是自己设定，很早就萌生了写篇干货分享整个历程。苦于时间和功能不完美一直拖着，现在终于要下笔了。期待我下次更新出干货地址吧
