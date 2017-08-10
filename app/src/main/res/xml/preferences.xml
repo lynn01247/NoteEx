@@ -37,7 +37,7 @@
         <CheckBoxPreference
             android:key="pre_1024"
             android:layout="@layout/preference_item"
-            android:summary="你懂的"
+            android:summary="你懂的\n如需填写VIP卡号，需关闭该开关后重新打开"
             android:title="开启1024"
             android:widgetLayout="@layout/switch_layout" />
         <EditTextPreference
@@ -46,5 +46,11 @@
             android:layout="@layout/preference_item"
             android:summary="屏蔽一切AD，享受绿色环境\n备注：开启1024状态下，方能生效"
             android:dialogTitle="请输入VIP卡号"/>
+        <ListPreference
+            android:key="vip_id"
+            android:summary=""
+            android:defaultValue="3"
+            android:layout="@layout/preference_item"
+            android:title="您的专属ID" />
     </PreferenceCategory>
 </PreferenceScreen>

@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.hyphenate.EMCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chat.EMOptions;
+import com.tencent.bugly.Bugly;
+import com.tencent.bugly.crashreport.CrashReport;
 import com.umeng.message.IUmengRegisterCallback;
 import com.umeng.message.PushAgent;
 import com.umeng.message.UTrack;
@@ -31,6 +33,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 import solid.ren.skinlibrary.SkinConfig;
 import solid.ren.skinlibrary.base.SkinBaseApplication;
+import tatait.com.noteex.BuildConfig;
 import tatait.com.noteex.R;
 import tatait.com.noteex.db.EmMyinfo;
 import tatait.com.noteex.db.EmUser;
@@ -161,8 +164,13 @@ public class App extends SkinBaseApplication {
             }
         };
         mPushAgent.setMessageHandler(messageHandler);
+
+        initBugly();
     }
 
+    private void initBugly() {
+        Bugly.init(getApplicationContext(), "2554b9bdea", true);
+    }
     public static App getInstance() {
         return sInstance;
     }

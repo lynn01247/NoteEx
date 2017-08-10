@@ -183,6 +183,7 @@ public class CommonUtil {
     public static String ORDER = "order";
     public static String PAGESIZE = "pageSize";
     public static String FRAGMENT_LIST_DEL = "fragment_list_del";
+    public static String FRAGMENT_VIP_DEL = "fragment_vip_del";
     public static String CURVIEWPAGER = "curViewPager";
 
     public static String FUNCTION = "function";

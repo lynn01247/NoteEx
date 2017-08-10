@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_size_10dp"
-        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginLeft="@dimen/margin_size_20dp"
         android:layout_marginTop="@dimen/margin_size_10dp"
         android:text="新标签名称" />
 
@@ -57,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_size_10dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_10dp"
             android:text="已有标签" />
 

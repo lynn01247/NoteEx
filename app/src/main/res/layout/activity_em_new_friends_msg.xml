@@ -23,7 +23,7 @@
                 android:id="@+id/title_layout_back_iv"
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
                 android:src="@drawable/main_back_img" />
 
             <TextView

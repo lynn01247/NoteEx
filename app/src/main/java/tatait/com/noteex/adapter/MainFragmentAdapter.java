@@ -48,9 +48,9 @@ public class MainFragmentAdapter extends BGARecyclerViewAdapter<GsonNoteModel.No
     public void fillData(BGAViewHolderHelper viewHolderHelper, int position, GsonNoteModel.NoteModel model) {
         CircleImageView user_img = viewHolderHelper.getView(R.id.item_fragment_list_user_img);
         if (StringUtils.isEmpty2(model.imgurl)) {
-            Picasso.with(mContext).load(R.drawable.icon_user_img).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(user_img);
+            Picasso.with(mContext.getApplicationContext()).load(R.drawable.icon_user_img).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(user_img);
         } else {
-            Picasso.with(mContext).load(model.imgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(user_img);
+            Picasso.with(mContext.getApplicationContext()).load(model.imgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(user_img);
         }
         if ("true".equals(model.collected)) {
             viewHolderHelper.getView(R.id.item_fragment_note_collect).setVisibility(View.VISIBLE);

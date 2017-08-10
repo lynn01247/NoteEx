@@ -16,12 +16,12 @@
             android:id="@android:id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_size_5dp"
+            android:layout_marginRight="@dimen/margin_size_5dp"
             android:ellipsize="marquee"
             android:fadingEdge="horizontal"
             android:maxLines="1"
             android:text="title"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:textColor="@color/black"
             android:textSize="@dimen/font_size_20sp" />
 
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_5dp"
             android:text="summary"
             android:textColor="@color/gray_line"

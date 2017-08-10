@@ -1,5 +1,6 @@
 package tatait.com.noteex.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -20,11 +21,15 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.security.NoSuchAlgorithmException;
+
 import tatait.com.noteex.LoginActivity;
 import tatait.com.noteex.MainActivity;
 import tatait.com.noteex.R;
+import tatait.com.noteex.ReadActivity;
 import tatait.com.noteex.util.AlertDialog;
 import tatait.com.noteex.util.CommonUtil;
+import tatait.com.noteex.util.MD5;
 import tatait.com.noteex.util.SharedPreferencesUtils;
 import tatait.com.noteex.util.StringUtils;
 import tatait.com.noteex.util.ToastUtil;
@@ -36,6 +41,7 @@ public class SettingFragment extends PreferenceFragment {
 
     CheckBoxPreference pre_1024;
     EditTextPreference vip_txt;
+    ListPreference vip_id_pref;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,9 +50,23 @@ public class SettingFragment extends PreferenceFragment {
         final CheckBoxPreference push_notice_pref = (CheckBoxPreference) getPreferenceManager().findPreference("push_notice");
         final CheckBoxPreference not_disturb_pref = (CheckBoxPreference) getPreferenceManager().findPreference("not_disturb");
         final ListPreference disturb_time_pref = (ListPreference) getPreferenceManager().findPreference("disturb_time");
+        vip_id_pref = (ListPreference) getPreferenceManager().findPreference("vip_id");
         pre_1024 = (CheckBoxPreference) getPreferenceManager().findPreference("pre_1024");
         vip_txt = (EditTextPreference) getPreferenceManager().findPreference("vip_txt");
 
+        vip_id_pref.setEnabled(false);
+        if (!(Boolean) SharedPreferencesUtils.getParam(getActivity().getApplicationContext(), CommonUtil.ISLOGIN, false)) {
+            vip_id_pref.setSummary("登录后获取您的专属ID");
+        } else {
+            int uid = (int) SharedPreferencesUtils.getParam(getActivity().getApplicationContext(), CommonUtil.UID, 0);
+            String vipId = "";
+            try {
+                vipId = MD5.MD5_16bit(uid + "");
+            } catch (NoSuchAlgorithmException e) {
+                e.printStackTrace();
+            }
+            vip_id_pref.setSummary("您的专属ID：" + vipId);
+        }
         CommonUtil.onettwozerofourHandler = mHandler;
         push_notice_pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
@@ -124,14 +144,15 @@ public class SettingFragment extends PreferenceFragment {
                 boolean checked = Boolean.valueOf(newValue.toString());
                 SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"pre_1024",checked);
                 if(checked) {
-                    JSONObject json = OnlineConfigAgent.getInstance().getConfigParamsJson(getActivity().getApplicationContext());
-                    boolean value = false;
-                    try {
-                        value = json.getBoolean("1024");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    if(!value){
+//                    JSONObject json = OnlineConfigAgent.getInstance().getConfigParamsJson(getActivity().getApplicationContext());
+//                    boolean value = false;
+//                    try {
+//                        value = json.getBoolean("vip");
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    }
+                    String value = (String)SharedPreferencesUtils.getParam(getActivity().getApplicationContext(),"isOpen","false");
+                    if("false".equals(value)){
                         if (CommonUtil.onettwozerofourHandler != null) {
                             Message message = new Message();
                             message.what = CommonUtil.onettwozerofourCode;
@@ -176,19 +197,36 @@ public class SettingFragment extends PreferenceFragment {
         vip_txt.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
             @Override
             public boolean onPreferenceChange(Preference preference, Object newValue) {
-                vip_txt.setSummary(newValue.toString());
-                JSONObject json = OnlineConfigAgent.getInstance().getConfigParamsJson(getActivity().getApplicationContext());
-                try {
-                    JSONArray value = json.getJSONArray("vip");
-                    for (int i = 0; i <value.length(); i++){
-                        if(!StringUtils.isEmpty2(newValue.toString()) && newValue.toString().equals(value.get(i))){
+                String  value = (String) SharedPreferencesUtils.getParam(getActivity().getApplicationContext(),"vip","");
+                if(!StringUtils.isEmpty2(value)){
+                    String[] arr = value.split(",");
+                    SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"isVip",false);
+                    SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"vip_num","");
+                    vip_txt.setSummary(newValue.toString() + "【非VIP】");
+                    for (int i = 0; i <arr.length; i++){
+                        if(!StringUtils.isEmpty2(newValue.toString()) && newValue.toString().equals(arr[i])){
                             SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"isVip",true);
                             SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"vip_num",newValue.toString());
                             vip_txt.setSummary(newValue.toString() + "  【vip 权限已激活,请勿重写VIP账号】");
                         }
                     }
-                } catch (JSONException e) {
-                    e.printStackTrace();
+                }else{
+                    JSONObject json = OnlineConfigAgent.getInstance().getConfigParamsJson(getActivity().getApplicationContext());
+                    try {
+                        JSONArray value1 = json.getJSONArray("vip");
+                        SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"isVip",false);
+                        SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"vip_num","");
+                        vip_txt.setSummary(newValue.toString() + "【非VIP】");
+                        for (int i = 0; i <value1.length(); i++){
+                            if(!StringUtils.isEmpty2(newValue.toString()) && newValue.toString().equals(value1.get(i))){
+                                SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"isVip",true);
+                                SharedPreferencesUtils.setParam(getActivity().getApplicationContext(),"vip_num",newValue.toString());
+                                vip_txt.setSummary(newValue.toString() + "  【vip 权限已激活,请勿重写VIP账号】");
+                            }
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
                 }
                 return false;
             }

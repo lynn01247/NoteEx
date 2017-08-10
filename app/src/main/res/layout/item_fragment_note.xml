@@ -14,7 +14,7 @@
             android:id="@+id/item_fragment_note_user_img"
             android:layout_width="@dimen/margin_size_50dp"
             android:layout_height="@dimen/margin_size_50dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_10dp"
             android:clickable="true"
             android:gravity="center"
@@ -25,9 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/margin_size_50dp"
             android:layout_marginBottom="@dimen/margin_size_10dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_10dp"
-            android:layout_toEndOf="@id/item_fragment_note_user_img"
+            android:layout_toRightOf="@id/item_fragment_note_user_img"
             android:clickable="true"
             android:gravity="center"
             android:text="昵称"
@@ -37,14 +37,14 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentRight="true">
 
             <ImageView
                 android:id="@+id/item_fragment_note_collect"
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="@dimen/margin_size_20dp"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="@dimen/margin_size_10dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_size_10dp"
                 android:layout_marginTop="@dimen/margin_size_10dp"
                 android:src="@drawable/has_collect"
                 android:visibility="gone"
@@ -54,7 +54,7 @@
                 android:id="@+id/item_fragment_note_shared"
                 android:layout_width="@dimen/margin_size_30dp"
                 android:layout_height="@dimen/margin_size_20dp"
-                android:layout_marginEnd="@dimen/margin_size_10dp"
+                android:layout_marginRight="@dimen/margin_size_10dp"
                 android:layout_marginTop="@dimen/margin_size_10dp"
                 android:layout_toLeftOf="@id/item_fragment_note_collect"
                 android:src="@drawable/has_shared"
@@ -68,8 +68,8 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/margin_size_0.1dp"
         android:layout_below="@id/item_fragment_note_user_rl"
-        android:layout_marginEnd="@dimen/margin_size_200dp"
-        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginRight="@dimen/margin_size_200dp"
+        android:layout_marginLeft="@dimen/margin_size_20dp"
         android:background="@drawable/gray_button_background"
         android:layerType="software" />
 
@@ -84,7 +84,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/margin_size_10dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_10dp"
             android:text="标题"
             android:textColor="@color/main_text"
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_item_fragment_note_title"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:text="2017-02-09 10:00:00"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="@dimen/font_size_16sp" />
@@ -105,8 +105,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_item_fragment_note_title"
-            android:layout_marginStart="@dimen/margin_size_10dp"
-            android:layout_toEndOf="@id/tv_item_fragment_note_time"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
+            android:layout_toRightOf="@id/tv_item_fragment_note_time"
             android:text="/默认/"
             android:textColor="@android:color/holo_blue_dark"
             android:textSize="@dimen/font_size_16sp" />
@@ -116,7 +116,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_item_fragment_note_time"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_7dp"
             android:ellipsize="end"
             android:maxLines="3"
@@ -134,8 +134,8 @@
             android:layout_below="@id/tv_item_fragment_note_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_size_20dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_20dp"
             android:orientation="horizontal">
             <ImageView
@@ -149,21 +149,21 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:layout_marginStart="@dimen/margin_size_4dp"
+                android:layout_marginLeft="@dimen/margin_size_4dp"
                 android:text="10"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="@dimen/font_size_18sp" />
             <ImageView
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="@dimen/margin_size_20dp"
-                android:layout_marginStart="@dimen/margin_size_20dp"
+                android:layout_marginLeft="@dimen/margin_size_20dp"
                 android:src="@drawable/collect_count"
                 android:alpha="0.3"/>
             <TextView
                 android:id="@+id/collect_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_size_4dp"
+                android:layout_marginLeft="@dimen/margin_size_4dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="10"
@@ -172,14 +172,14 @@
             <ImageView
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="@dimen/margin_size_20dp"
-                android:layout_marginStart="@dimen/margin_size_20dp"
+                android:layout_marginLeft="@dimen/margin_size_20dp"
                 android:src="@drawable/praise_count"
                 android:alpha="0.3"/>
             <TextView
                 android:id="@+id/praise_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_size_4dp"
+                android:layout_marginLeft="@dimen/margin_size_4dp"
                 android:ellipsize="end"
                 android:maxLines="1"
                 android:text="10"
@@ -192,8 +192,8 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_size_0.1dp"
             android:layout_below="@id/item_fragment_note_num"
-            android:layout_marginEnd="@dimen/margin_size_20dp"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:layout_marginTop="@dimen/margin_size_3dp"
             android:background="@color/actionsheet_blue"
             android:layerType="software" />

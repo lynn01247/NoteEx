@@ -327,6 +327,17 @@ public class MainActivity extends BaseActivity {
         }else {
             nav_main_fuli.setVisibility(View.GONE);
         }
+        new Thread(new Runnable() {
+            public void run() {
+                if (EMClient.getInstance().isLoggedInBefore()) {
+                    // ** 免登陆情况 加载所有本地群和会话
+                    //不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
+                    //加上的话保证进了主页面会话和群组都已经load完毕
+                    EMClient.getInstance().groupManager().loadAllGroups();
+                    EMClient.getInstance().chatManager().loadAllConversations();
+                }
+            }
+        }).start();
     }
 
     public Handler mHandler = new Handler() {
@@ -405,7 +416,7 @@ public class MainActivity extends BaseActivity {
         } else if (viewPager.getCurrentItem() == 1) {
             ((FileTagFragment) fragmentList.get(1)).refreshGetData();
         } else if (viewPager.getCurrentItem() == 2) {
-            ((EmTalkFragment) fragmentList.get(2)).refreshGetData(MainActivity.this, false);
+            ((EmTalkFragment) fragmentList.get(2)).refreshGetData(false);
         }
     }
 
@@ -435,21 +446,21 @@ public class MainActivity extends BaseActivity {
 //        String imgUrl = "http://q.qlogo.cn/qqapp/1105942981/1325832F148D963EEFF3ACA2360B43C6/100";
         String imgUrl = SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.IMGURL, "").toString();
         if (!StringUtils.isEmpty2(imgUrl)) {
-            Picasso.with(this).load(imgUrl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(header_image);
+            Picasso.with(getApplicationContext()).load(imgUrl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(header_image);
             nav_main_logout.setVisibility(View.VISIBLE);
         } else {
-            Picasso.with(this).load(R.drawable.icon_user_img).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(header_image);
+            Picasso.with(getApplicationContext()).load(R.drawable.icon_user_img).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(header_image);
             nav_main_logout.setVisibility(View.GONE);
         }
         if (!(Boolean) SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.ISLOGIN, false)) {
             if (toolbar_tv != null && viewPager != null && viewPager.getCurrentItem() == 2) {
                 toolbar_tv.animateText("站内信(未登录)");
-                ((EmTalkFragment) fragmentList.get(2)).refreshGetData(MainActivity.this, false);
+                ((EmTalkFragment) fragmentList.get(2)).refreshGetData(false);
             }
         } else {
             if (toolbar_tv != null && viewPager != null && viewPager.getCurrentItem() == 2) {
                 toolbar_tv.animateText("站 内 信");
-                ((EmTalkFragment) fragmentList.get(2)).refreshGetData(MainActivity.this, false);
+                ((EmTalkFragment) fragmentList.get(2)).refreshGetData(false);
             }
         }
     }

@@ -54,7 +54,7 @@ public class MainFragment extends BaseFragment implements BGAOnRVItemClickListen
     private MainFragmentAdapter mAdapter;
     private List<RefreshModel> dataList;
     private BGARefreshLayout mRefreshLayout;
-    private RelativeLayout see_rl, see_rl2, see_rl3, sore_rl1, sore_rl2, fragment_list_tip, fragment_no_data;
+    private RelativeLayout see_rl, see_rl2, see_rl3, sore_rl1, sore_rl2, fragment_list_tip, fragment_no_data,fragment_vip_tip;
     private Button no_data_tip_ll;
     private ImageView see_show_iv, see_show_iv2, see_show_iv3, sore_create_iv, sore_update_iv;
     private TextView no_data_tip_tv;
@@ -65,19 +65,21 @@ public class MainFragment extends BaseFragment implements BGAOnRVItemClickListen
     private int mMorePageNumber = 1;
     private int order;
 
-    private int uid, del_tag;
+    private int uid, del_tag,del_vip;
     private String token;
     private String getDataUrl;
     private Context mContext;
 
-    private CircleImageView fragment_list_del;
+    private CircleImageView fragment_list_del,fragment_vip_del;
 
     @Override
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.fragment_recycler_list);
         mRefreshLayout = getViewById(R.id.refreshLayout);
+        fragment_vip_tip = getViewById(R.id.fragment_vip_tip);
         fragment_list_tip = getViewById(R.id.fragment_list_tip);
         fragment_list_del = getViewById(R.id.fragment_list_del);
+        fragment_vip_del = getViewById(R.id.fragment_vip_del);
         fragment_no_data = getViewById(R.id.fragment_no_data);
         mDataRv = getViewById(R.id.data);
         no_data_tip_ll = getViewById(R.id.no_data_tip_ll);
@@ -115,6 +117,7 @@ public class MainFragment extends BaseFragment implements BGAOnRVItemClickListen
         see_rl2.setOnClickListener(this);
         see_rl3.setOnClickListener(this);
         fragment_list_del.setOnClickListener(this);
+        fragment_vip_del.setOnClickListener(this);
         no_data_tip_ll.setOnClickListener(this);
 
         mRefreshLayout.setDelegate(this);
@@ -182,6 +185,16 @@ public class MainFragment extends BaseFragment implements BGAOnRVItemClickListen
             see_show_iv.setVisibility(View.GONE);
             see_show_iv2.setVisibility(View.GONE);
             see_show_iv3.setVisibility(View.VISIBLE);
+        }
+        String link = (String)SharedPreferencesUtils.getParam(getActivity().getApplicationContext(),"link","false");
+        if("true".equals(link)){
+            fragment_vip_tip.setVisibility(View.VISIBLE);
+        }else{
+            fragment_vip_tip.setVisibility(View.GONE);
+        }
+        del_vip = (int) SharedPreferencesUtils.getParam(mApp, CommonUtil.FRAGMENT_VIP_DEL, 0);
+        if (del_vip == 1) {
+            fragment_vip_tip.setVisibility(View.GONE);//提示可见
         }
     }
 
@@ -441,6 +454,10 @@ public class MainFragment extends BaseFragment implements BGAOnRVItemClickListen
             case R.id.fragment_list_del:
                 SharedPreferencesUtils.setParam(mApp, CommonUtil.FRAGMENT_LIST_DEL, 1);
                 fragment_list_tip.setVisibility(View.GONE);
+                break;
+            case R.id.fragment_vip_del:
+                SharedPreferencesUtils.setParam(mApp, CommonUtil.FRAGMENT_VIP_DEL, 1);
+                fragment_vip_tip.setVisibility(View.GONE);
                 break;
             case R.id.no_data_tip_ll:
                 CommonUtil.map = null;

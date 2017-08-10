@@ -35,7 +35,7 @@
                     <ImageView
                         android:layout_width="@dimen/margin_size_30dp"
                         android:layout_height="@dimen/margin_size_30dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:src="@drawable/umeng_socialize_qq" />
 
@@ -43,7 +43,7 @@
                         android:layout_width="@dimen/margin_size_0.1dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="@dimen/margin_size_10dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:background="@color/gray_dark"
                         android:layerType="software" />
@@ -52,7 +52,7 @@
                         android:id="@+id/user_info_qq"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_weight="1"
                         android:alpha="0.6"
                         android:gravity="left|center"
@@ -64,7 +64,7 @@
                         android:layout_width="@dimen/margin_size_15dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:layout_marginRight="@dimen/margin_size_20dp"
                         android:src="@drawable/umeng_arrow" />
                 </LinearLayout>
 
@@ -79,7 +79,7 @@
                     <ImageView
                         android:layout_width="@dimen/margin_size_30dp"
                         android:layout_height="@dimen/margin_size_30dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:src="@drawable/umeng_socialize_sina" />
 
@@ -87,7 +87,7 @@
                         android:layout_width="@dimen/margin_size_0.1dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="@dimen/margin_size_10dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:background="@color/gray_dark"
                         android:layerType="software" />
@@ -96,7 +96,7 @@
                         android:id="@+id/user_info_sina"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_weight="1"
                         android:alpha="0.6"
                         android:gravity="left|center"
@@ -108,7 +108,7 @@
                         android:layout_width="@dimen/margin_size_15dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:layout_marginRight="@dimen/margin_size_20dp"
                         android:src="@drawable/umeng_arrow" />
                 </LinearLayout>
 
@@ -125,7 +125,7 @@
                     <ImageView
                         android:layout_width="@dimen/margin_size_30dp"
                         android:layout_height="@dimen/margin_size_30dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:src="@drawable/umeng_socialize_wechat" />
 
@@ -133,7 +133,7 @@
                         android:layout_width="@dimen/margin_size_0.1dp"
                         android:layout_height="match_parent"
                         android:layout_marginBottom="@dimen/margin_size_10dp"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_marginTop="@dimen/margin_size_10dp"
                         android:background="@color/gray_dark"
                         android:layerType="software" />
@@ -142,7 +142,7 @@
                         android:id="@+id/user_info_wechat"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="@dimen/margin_size_20dp"
+                        android:layout_marginLeft="@dimen/margin_size_20dp"
                         android:layout_weight="1"
                         android:alpha="0.6"
                         android:gravity="left|center"
@@ -154,7 +154,7 @@
                         android:layout_width="@dimen/margin_size_15dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="right"
-                        android:layout_marginEnd="@dimen/margin_size_20dp"
+                        android:layout_marginRight="@dimen/margin_size_20dp"
                         android:src="@drawable/umeng_arrow" />
                 </LinearLayout>
 

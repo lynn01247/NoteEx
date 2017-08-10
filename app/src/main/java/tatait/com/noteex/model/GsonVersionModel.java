@@ -22,6 +22,8 @@ public class GsonVersionModel implements Serializable {
         public String ios_link;
         public String mainImg;
         public String mustUpdate;
+        public String isOpen;
+        public String vip;
         public String adLink;
         // 跟图片混合使用
         public String title;
@@ -106,6 +108,22 @@ public class GsonVersionModel implements Serializable {
 
         public void setId(String id) {
             this.id = id;
+        }
+
+        public String getIsOpen() {
+            return isOpen;
+        }
+
+        public void setIsOpen(String isOpen) {
+            this.isOpen = isOpen;
+        }
+
+        public String getVip() {
+            return vip;
+        }
+
+        public void setVip(String vip) {
+            this.vip = vip;
         }
     }
 

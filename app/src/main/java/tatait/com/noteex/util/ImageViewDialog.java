@@ -2,6 +2,8 @@ package tatait.com.noteex.util;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,14 +16,16 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import tatait.com.noteex.R;
 
-public class AlertDialog {
+public class ImageViewDialog {
     private Context mContext;
     private Dialog dialog;
-    private LinearLayout lLayout_bg,txt_msg_id_ll;
-    private TextView txt_title,txt_msg_id;
-    //	private View txt_line;
+    private LinearLayout lLayout_bg;
+    private TextView txt_title;
+    private ImageView img_qr;
     private TextView txt_msg;
     private Button btn_neg;
     private Button btn_pos;
@@ -29,31 +33,31 @@ public class AlertDialog {
     private Display display;
     private boolean showTitle = false;
     private boolean showMsg = false;
-    private boolean showMsgId = false;
     private boolean showPosBtn = false;
     private boolean showNegBtn = false;
 
-    public AlertDialog(Context mContext) {
+    public ImageViewDialog(Context mContext) {
         this.mContext = mContext;
-        WindowManager windowManager = (WindowManager) mContext.getSystemService(Context.WINDOW_SERVICE);
+        WindowManager windowManager = (WindowManager) mContext
+                .getSystemService(Context.WINDOW_SERVICE);
         display = windowManager.getDefaultDisplay();
     }
 
-    public AlertDialog builder() {
+    public ImageViewDialog builder() {
         // 获取Dialog布局
-        View view = LayoutInflater.from(mContext).inflate(R.layout.view_alertdialog, null);
+        View view = LayoutInflater.from(mContext).inflate(
+                R.layout.image_view_dialog, null);
 
         // 获取自定义Dialog布局中的控件
         lLayout_bg = (LinearLayout) view.findViewById(R.id.lLayout_bg);
-        txt_msg_id_ll = (LinearLayout) view.findViewById(R.id.txt_msg_id_ll);
+        img_qr = (ImageView) view.findViewById(R.id.img_qr);
+        img_qr.setVisibility(View.GONE);
         txt_title = (TextView) view.findViewById(R.id.txt_title);
-//		txt_line = (View) view.findViewById(R.id.txt_line);
+//                                                                                  txt_line = (View) view.findViewById(R.id.txt_line);
         txt_title.setVisibility(View.GONE);
-//		txt_line.setVisibility(View.GONE);
+//                                                                                  txt_line.setVisibility(View.GONE);
         txt_msg = (TextView) view.findViewById(R.id.txt_msg);
         txt_msg.setVisibility(View.GONE);
-        txt_msg_id = (TextView) view.findViewById(R.id.txt_msg_id);
-        txt_msg_id_ll.setVisibility(View.GONE);
         btn_neg = (Button) view.findViewById(R.id.btn_neg);
         btn_neg.setVisibility(View.GONE);
         btn_pos = (Button) view.findViewById(R.id.btn_pos);
@@ -67,11 +71,13 @@ public class AlertDialog {
         dialog.setContentView(view);
 
         // 调整dialog背景大小
-        lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (display.getWidth() * 0.85), LayoutParams.WRAP_CONTENT));
+        lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (display
+                .getWidth() * 0.85), LayoutParams.WRAP_CONTENT));
+
         return this;
     }
 
-    public AlertDialog setTitle(String title) {
+    public ImageViewDialog setTitle(String title) {
         showTitle = true;
         if ("".equals(title)) {
             txt_title.setText("标题");
@@ -80,8 +86,17 @@ public class AlertDialog {
         }
         return this;
     }
+    public ImageViewDialog setImg(int src) {
+        if ("".equals(src)) {
+            img_qr.setVisibility(View.GONE);
+        } else {
+            img_qr.setVisibility(View.VISIBLE);
+            Picasso.with(mContext.getApplicationContext()).load(src).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(img_qr);
+        }
+        return this;
+    }
 
-    public AlertDialog setMsg(String msg) {
+    public ImageViewDialog setMsg(String msg) {
         showMsg = true;
         if ("".equals(msg)) {
             txt_msg.setText("内容");
@@ -90,23 +105,14 @@ public class AlertDialog {
         }
         return this;
     }
-    public AlertDialog setMsgId(String id) {
-        showMsgId = true;
-        if ("".equals(id)) {
-            txt_msg_id.setText("");
-        } else {
-            txt_msg_id.setText(id);
-        }
-        return this;
-    }
 
-    public AlertDialog setCancelable(boolean cancel) {
+    public ImageViewDialog setCancelable(boolean cancel) {
         dialog.setCancelable(cancel);
         return this;
     }
 
-    public AlertDialog setPositiveButton(String text,
-                                         final OnClickListener listener) {
+    public ImageViewDialog setPositiveButton(String text,
+                                             final OnClickListener listener) {
         showPosBtn = true;
         if ("".equals(text)) {
             btn_pos.setText("确定");
@@ -123,8 +129,8 @@ public class AlertDialog {
         return this;
     }
 
-    public AlertDialog setNegativeButton(String text,
-                                         final OnClickListener listener) {
+    public ImageViewDialog setNegativeButton(String text,
+                                             final OnClickListener listener) {
         showNegBtn = true;
         if ("".equals(text)) {
             btn_neg.setText("取消");
@@ -145,19 +151,16 @@ public class AlertDialog {
         if (!showTitle && !showMsg) {
             txt_title.setText("提示");
             txt_title.setVisibility(View.VISIBLE);
-//			txt_line.setVisibility(View.VISIBLE);
+//                                                                                                                            txt_line.setVisibility(View.VISIBLE);
         }
 
         if (showTitle) {
             txt_title.setVisibility(View.VISIBLE);
-//			txt_line.setVisibility(View.VISIBLE);
+//                                                                                                                            txt_line.setVisibility(View.VISIBLE);
         }
 
         if (showMsg) {
             txt_msg.setVisibility(View.VISIBLE);
-        }
-        if (showMsgId) {
-            txt_msg_id_ll.setVisibility(View.VISIBLE);
         }
 
         if (!showPosBtn && !showNegBtn) {

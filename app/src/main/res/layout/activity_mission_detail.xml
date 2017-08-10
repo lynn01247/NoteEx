@@ -62,18 +62,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/main_bpng">
+        <FrameLayout
+            android:id="@+id/bannerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </FrameLayout>
         <TextView
             android:id="@+id/mission_detail_layout_time"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_size_30dp"
+            android:layout_below="@id/bannerContainer"
             android:gravity="center|right"
-            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
             android:text="2017-03-01"
             android:textColor="@color/gray_line"
             android:textSize="@dimen/font_size_15sp"/>
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_below="@id/mission_detail_layout_time">
             <TextView
                 android:id="@+id/mission_detail_layout_content"
                 android:layout_width="match_parent"

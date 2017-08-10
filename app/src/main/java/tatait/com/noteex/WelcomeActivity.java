@@ -28,14 +28,16 @@ import tatait.com.noteex.util.SharedPreferencesUtils;
 import tatait.com.noteex.util.StringUtils;
 import tatait.com.noteex.util.ToastUtil;
 
-
+/**
+ * 目前停用
+ */
 public class WelcomeActivity extends BaseActivity {
     private static final String TGA = "WelcomeActivity";
     private ImageView welcome_activity_img;
     private CountDownProgressView countDownProgressView;
     private boolean hasNewVersion = false;
     private boolean jumpToAd = false;
-    private static int DELAY_TIME = 3500;
+    private static int DELAY_TIME = 1000;
     private static String link = "";
     private Context mContext;
     private String mustUpdate;
@@ -59,7 +61,7 @@ public class WelcomeActivity extends BaseActivity {
         mContext = this;
         CommonUtil.setPermissions(WelcomeActivity.this);//针对6.0系统动态获取权限
         OnlineConfigAgent.getInstance().updateOnlineConfig(getApplicationContext());
-        OnlineConfigAgent.getInstance().setDebugMode(false);
+        OnlineConfigAgent.getInstance().setDebugMode(true);
         //判断是否是第一次使用，是的话跳转引导页
         String mtype = android.os.Build.MODEL; // 手机型号
         Log.i(TGA, mtype);
@@ -153,7 +155,7 @@ public class WelcomeActivity extends BaseActivity {
                         if (gsonModel != null && gsonModel.getData() != null & gsonModel.getData().size() > 0) {
                             //获取首页图片和广告
                             if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getMainImg())) {
-                                Picasso.with(mContext).load(gsonModel.getData().get(0).getMainImg()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(welcome_activity_img);
+                                Picasso.with(mContext.getApplicationContext()).load(gsonModel.getData().get(0).getMainImg()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(welcome_activity_img);
                             }
                             //判断是否强制更新
                             if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getMustUpdate())) {
@@ -161,6 +163,10 @@ public class WelcomeActivity extends BaseActivity {
                             }
                             if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getAdLink())) {
                                 link = gsonModel.getData().get(0).getAdLink();
+                            }
+                            if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getIsOpen())) {
+                                SharedPreferencesUtils.setParam(mContext,"isOpen",gsonModel.getData().get(0).getIsOpen());
+                                SharedPreferencesUtils.setParam(mContext,"vip",gsonModel.getData().get(0).getVip());
                             }
                             //判断版本信息
                             String android_version = gsonModel.getData().get(0).getAndroid_version();

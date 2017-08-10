@@ -22,9 +22,9 @@
             android:id="@+id/iv_userhead"
             android:layout_width="@dimen/margin_size_60dp"
             android:layout_height="@dimen/margin_size_60dp"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_marginEnd="@dimen/margin_size_5dp"
+            android:layout_marginRight="@dimen/margin_size_5dp"
             android:background="@drawable/em_default_avatar"
             android:scaleType="centerCrop" />
 
@@ -33,14 +33,14 @@
             style="@style/chat_content_date_style"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_size_5dp"
-            android:layout_toStartOf="@id/iv_userhead"
+            android:layout_marginRight="@dimen/margin_size_5dp"
+            android:layout_toLeftOf="@id/iv_userhead"
             android:autoLink="web"
             android:background="@drawable/em_chatto_bg"
             android:gravity="left|center"
             android:lineSpacingExtra="@dimen/margin_size_2dp"
             android:maxWidth="@dimen/margin_size_220dp"
-            android:paddingStart="@dimen/margin_size_20dp"
+            android:paddingLeft="@dimen/margin_size_20dp"
             android:textSize="@dimen/font_size_20sp" />
 
 
@@ -49,7 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/tv_chatcontent"
+            android:layout_toLeftOf="@id/tv_chatcontent"
             android:clickable="true"
             android:src="@drawable/em_msg_state_fail_resend_pressed"
             android:visibility="gone" />
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/tv_chatcontent"
+            android:layout_toLeftOf="@id/tv_chatcontent"
             android:text="@string/text_ack_msg"
             android:textSize="@dimen/font_size_14sp"
             android:visibility="invisible" />
@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/tv_chatcontent"
+            android:layout_toLeftOf="@id/tv_chatcontent"
             android:text="@string/text_delivered_msg"
             android:textSize="@dimen/font_size_14sp"
             android:visibility="invisible" />
@@ -81,7 +81,7 @@
             android:layout_width="@dimen/margin_size_25dp"
             android:layout_height="@dimen/margin_size_25dp"
             android:layout_centerVertical="true"
-            android:layout_toStartOf="@id/tv_chatcontent"
+            android:layout_toLeftOf="@id/tv_chatcontent"
             android:visibility="gone" />
     </RelativeLayout>
 </LinearLayout>

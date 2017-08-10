@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_size_10dp"
-        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginLeft="@dimen/margin_size_20dp"
         android:layout_marginTop="@dimen/margin_size_10dp"
         android:text="当前文件夹" />
 
@@ -29,7 +29,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/margin_size_40dp"
             android:layout_gravity="left"
-            android:layout_marginStart="@dimen/margin_size_20dp"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
             android:gravity="center"
             android:text="跟文件夹"
             android:textColor="@android:color/holo_blue_dark"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/margin_size_10dp"
-        android:layout_marginStart="@dimen/margin_size_20dp"
+        android:layout_marginLeft="@dimen/margin_size_20dp"
         android:layout_marginTop="@dimen/margin_size_10dp"
         android:text="所有文件夹" />
 

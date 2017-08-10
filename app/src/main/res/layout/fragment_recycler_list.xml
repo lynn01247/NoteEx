@@ -10,7 +10,37 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+            android:id="@+id/fragment_vip_tip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg_tab"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
+                android:gravity="center"
+                android:text="福利新功能：撸世界（1024）\n在主界面右滑进入【设置】即可开启\n嘘！一般人我不告诉他，你懂的"
+                android:textColor="@color/red"
+                android:textSize="@dimen/font_size_18sp" />
+
+            <tatait.com.noteex.util.CircleImageView
+                android:id="@+id/fragment_vip_del"
+                android:layout_width="@dimen/margin_size_30dp"
+                android:layout_height="@dimen/margin_size_30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_size_2dp"
+                android:layout_marginRight="@dimen/margin_size_10dp"
+                android:layout_marginTop="@dimen/margin_size_2dp"
+                android:alpha="0.4"
+                android:src="@drawable/del" />
+        </RelativeLayout>
+        <RelativeLayout
             android:id="@+id/fragment_list_tip"
+            android:layout_below="@id/fragment_vip_tip"
             android:layout_width="match_parent"
             android:layout_height="@dimen/margin_size_30dp"
             android:background="@color/main_bg_tab"
@@ -20,7 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/margin_size_30dp"
                 android:layout_gravity="center_vertical"
-                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
                 android:gravity="center"
                 android:text="长按可以进行删除,收藏,分享等操作哦... ^_^ "
                 android:textColor="@color/main_bgtext_tab"
@@ -32,7 +62,7 @@
                 android:layout_height="@dimen/margin_size_30dp"
                 android:layout_alignParentRight="true"
                 android:layout_marginBottom="@dimen/margin_size_2dp"
-                android:layout_marginEnd="@dimen/margin_size_10dp"
+                android:layout_marginRight="@dimen/margin_size_10dp"
                 android:layout_marginTop="@dimen/margin_size_2dp"
                 android:alpha="0.4"
                 android:src="@drawable/del" />

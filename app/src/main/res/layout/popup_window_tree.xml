@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/margin_size_40dp"
             android:gravity="center"
-            android:paddingStart="@dimen/margin_size_20dp"
+            android:paddingLeft="@dimen/margin_size_20dp"
             android:text="文件夹"
             android:textColor="@color/actionsheet_blue"
             android:textSize="@dimen/font_size_18sp" />
@@ -35,8 +35,8 @@
             android:id="@+id/file_iv"
             android:layout_width="@dimen/margin_size_30dp"
             android:layout_height="@dimen/margin_size_30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_size_30dp"
             android:src="@drawable/popup_check" />
     </RelativeLayout>
 
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="@dimen/margin_size_40dp"
             android:gravity="center"
-            android:paddingStart="@dimen/margin_size_20dp"
+            android:paddingLeft="@dimen/margin_size_20dp"
             android:text="标签"
             android:textColor="@color/actionsheet_blue"
             android:textSize="@dimen/font_size_18sp" />
@@ -59,8 +59,8 @@
             android:id="@+id/tag_iv"
             android:layout_width="@dimen/margin_size_30dp"
             android:layout_height="@dimen/margin_size_30dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/margin_size_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_size_30dp"
             android:src="@drawable/popup_check"
             android:visibility="gone" />
     </RelativeLayout>

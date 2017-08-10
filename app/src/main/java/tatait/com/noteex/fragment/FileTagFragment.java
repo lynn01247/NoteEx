@@ -104,10 +104,12 @@ public class FileTagFragment extends BaseFragment implements View.OnClickListene
 //    }
 
     public void refreshGetData() {
-        if ((int) SharedPreferencesUtils.getParam(mApp, CommonUtil.FUNCTION, 1) == 1) {
-            getFileData();
-        } else {
-            getTagData();
+        if(uid != 0){
+            if ((int) SharedPreferencesUtils.getParam(mApp, CommonUtil.FUNCTION, 1) == 1) {
+                getFileData();
+            } else {
+                getTagData();
+            }
         }
     }
 

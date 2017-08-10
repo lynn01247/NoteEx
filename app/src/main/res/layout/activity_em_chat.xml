@@ -22,7 +22,7 @@
                 android:id="@+id/title_layout_back_iv"
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
                 android:src="@drawable/main_back_img" />
 
             <TextView
@@ -55,10 +55,10 @@
             android:id="@+id/btn_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_margin="@dimen/margin_size_10dp"
-            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
             android:background="@color/colorPrimary"
             android:padding="@dimen/margin_size_8dp"
             android:text="发送"
@@ -71,10 +71,10 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_margin="@dimen/margin_size_10dp"
-            android:layout_toStartOf="@id/btn_send"
+            android:layout_toLeftOf="@id/btn_send"
             android:background="#f0f0f0"
             android:hint="请输入内容"
-            android:paddingStart="@dimen/margin_size_10dp"
+            android:paddingLeft="@dimen/margin_size_10dp"
             android:textSize="@dimen/font_size_18sp" />
     </RelativeLayout>
 

@@ -126,7 +126,7 @@
                 android:layout_width="7dp"
                 android:layout_height="7dp"
                 android:layout_alignParentRight="true"
-                android:layout_marginEnd="@dimen/margin_size_18dp"
+                android:layout_marginRight="@dimen/margin_size_18dp"
                 android:background="@color/red"
                 android:gravity="center_vertical"
                 android:visibility="gone" />

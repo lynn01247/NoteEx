@@ -23,7 +23,7 @@
                 android:id="@+id/title_layout_back_iv"
                 android:layout_width="@dimen/margin_size_20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/margin_size_10dp"
+                android:layout_marginLeft="@dimen/margin_size_10dp"
                 android:src="@drawable/main_back_img" />
 
             <TextView
@@ -45,8 +45,9 @@
             android:textSize="@dimen/font_size_20sp" />
     </RelativeLayout>
     <RelativeLayout
+        android:id="@+id/activity_fuli_rl"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <RelativeLayout
             android:id="@+id/activity_fuli_wenxue_rl"
             android:layout_width="match_parent"
@@ -269,12 +270,32 @@
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/bannerContainer_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:text="开发者心声：\n原本是打算为狼友提供绿色环境阅读和浏览的，但是由于部分使用者恶意攻击，使得维护成本提升。\n在不影响狼友阅读的前提下，不得不结合广告。望见谅。\n\n希望广大狼友有空可以点击下广告，您的每一次点击都能帮助维护更持久 服务平台。\n当然也可以给开发者发个小红包什么的。\n\n我的微信和QQ都是： 2443938389。\n * 加友备注（超级笔记1024）"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
+            android:layout_marginTop="@dimen/margin_size_10dp"
+            android:text="这个是广告哦 ^_^  ↓"
+            android:textSize="@dimen/font_size_20sp"
+            android:textColor="@color/green"/>
         <FrameLayout
-            android:layout_below="@id/activity_fuli_pic_rl"
             android:id="@+id/bannerContainer"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/margin_size_10dp"
-            android:layout_alignParentTop="true" >
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_size_20dp">
         </FrameLayout>
-    </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

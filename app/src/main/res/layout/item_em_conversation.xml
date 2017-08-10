@@ -10,14 +10,14 @@
         android:id="@+id/avatar_container"
         android:layout_width="@dimen/margin_size_80dp"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentLeft="true">
 
         <tatait.com.noteex.util.CircleImageView
             android:id="@+id/avatar"
             android:layout_width="@dimen/margin_size_60dp"
             android:layout_height="@dimen/margin_size_60dp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/margin_size_10dp"
+            android:layout_marginLeft="@dimen/margin_size_10dp"
             android:scaleType="centerCrop"
             android:src="@drawable/em_default_avatar" />
 
@@ -25,8 +25,8 @@
             android:id="@+id/unread_msg_number"
             android:layout_width="@dimen/margin_size_35dp"
             android:layout_height="@dimen/margin_size_35dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="@dimen/margin_size_2dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_size_2dp"
             android:layout_marginTop="@dimen/margin_size_3dp"
             android:background="@drawable/em__unread_count_bg"
             android:gravity="center"
@@ -39,9 +39,9 @@
         android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_size_7dp"
+        android:layout_marginLeft="@dimen/margin_size_7dp"
         android:layout_marginTop="@dimen/margin_size_6dp"
-        android:layout_toEndOf="@id/avatar_container"
+        android:layout_toRightOf="@id/avatar_container"
         android:text="testdata"
         android:textColor="#000"
         android:textSize="@dimen/font_size_18sp" />
@@ -50,8 +50,8 @@
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="@dimen/margin_size_7dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_size_7dp"
         android:layout_marginTop="@dimen/margin_size_6dp"
         android:textColor="#999999"
         android:textSize="@dimen/font_size_15sp" />
@@ -62,8 +62,8 @@
         android:layout_height="@dimen/margin_size_20dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/margin_size_5dp"
-        android:layout_marginStart="@dimen/margin_size_7dp"
-        android:layout_toEndOf="@id/avatar_container"
+        android:layout_marginLeft="@dimen/margin_size_7dp"
+        android:layout_toRightOf="@id/avatar_container"
         android:src="@drawable/em__msg_state_fail_resend"
         android:visibility="gone" />
 
@@ -72,8 +72,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@id/time"
-        android:layout_toEndOf="@id/msg_state"
+        android:layout_toLeftOf="@id/time"
+        android:layout_toRightOf="@id/msg_state"
         android:ellipsize="end"
         android:padding="@dimen/margin_size_7dp"
         android:singleLine="true"

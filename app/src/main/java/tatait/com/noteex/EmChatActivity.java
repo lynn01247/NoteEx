@@ -247,15 +247,15 @@ public class EmChatActivity extends BaseActivity {
                 holder.avatar = (ImageView) convertView.findViewById(R.id.iv_userhead);
                 if (viewType == 0) {
                     if (StringUtils.isEmpty2(toChatimgurl)) {
-                        Picasso.with(mContext).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                        Picasso.with(mContext.getApplicationContext()).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                     } else {
-                        Picasso.with(mContext).load(toChatimgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                        Picasso.with(mContext.getApplicationContext()).load(toChatimgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                     }
                 } else {
                     if (StringUtils.isEmpty2(SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.IMGURL, "").toString())) {
-                        Picasso.with(mContext).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                        Picasso.with(mContext.getApplicationContext()).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                     } else {
-                        Picasso.with(mContext).load(SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.IMGURL, "").toString()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                        Picasso.with(mContext.getApplicationContext()).load(SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.IMGURL, "").toString()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                     }
                 }
                 convertView.setTag(holder);

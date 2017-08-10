@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:background="#E0E0E0"
         android:paddingBottom="@dimen/margin_size_2dp"
-        android:paddingStart="@dimen/margin_size_10dp"
+        android:paddingLeft="@dimen/margin_size_10dp"
         android:paddingTop="@dimen/margin_size_2dp"
         android:textColor="#8a99ac"
         android:textSize="@dimen/font_size_17sp"
@@ -27,7 +27,7 @@
             android:layout_width="@dimen/margin_size_43dp"
             android:layout_height="@dimen/margin_size_43dp"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/margin_size_11dp"
+            android:layout_marginLeft="@dimen/margin_size_11dp"
             android:scaleType="centerCrop"
             android:src="@drawable/em_default_avatar" />
 
@@ -35,9 +35,9 @@
             android:id="@+id/unread_msg_number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/margin_size_20dp"
+            android:layout_marginRight="@dimen/margin_size_20dp"
             android:gravity="center"
             android:textSize="@dimen/font_size_14sp"
             android:visibility="invisible" />
@@ -45,9 +45,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginStart="@dimen/margin_size_11dp"
-            android:layout_toStartOf="@+id/unread_msg_number"
-            android:layout_toEndOf="@id/iv_avatar"
+            android:layout_marginLeft="@dimen/margin_size_11dp"
+            android:layout_toLeftOf="@+id/unread_msg_number"
+            android:layout_toRightOf="@id/iv_avatar"
             android:gravity="center_vertical"
             android:orientation="vertical">
 
@@ -60,7 +60,7 @@
                     android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/margin_size_4dp"
+                    android:layout_marginRight="@dimen/margin_size_4dp"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:textColor="#8C8C8C"
@@ -71,7 +71,7 @@
                 android:id="@+id/signature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/margin_size_4dp"
+                android:layout_marginRight="@dimen/margin_size_4dp"
                 android:layout_marginTop="@dimen/margin_size_4dp"
                 android:ellipsize="end"
                 android:singleLine="true"

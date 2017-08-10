@@ -56,7 +56,11 @@
             android:textColor="@color/white"
             android:textSize="@dimen/font_size_18sp" />
     </RelativeLayout>
-
+    <FrameLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
     <tatait.com.noteex.util.SwipeRefreshView
         android:id="@+id/mission_swipe_ly"
         android:layout_width="match_parent"

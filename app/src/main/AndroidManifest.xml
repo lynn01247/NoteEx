@@ -34,6 +34,8 @@
     <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
     <uses-permission android:name="com.android.launcher.permission.WRITE_SETTINGS" />
 
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
     <uses-sdk android:minSdkVersion="8" tools:overrideLibrary="com.umeng.socialize.evernote,com.umeng.socialize.pinterest"/>
 
     <application
@@ -44,6 +46,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
         <activity
             android:name="tatait.com.noteex.SplashActivity"
             android:label="@string/app_name"
@@ -93,7 +105,10 @@
 
         <activity android:name="tatait.com.noteex.EmChatActivity" />
         <activity android:name="tatait.com.noteex.EmNewFriendsMsgActivity" />
-
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
         <receiver android:name=".widget.UpdateAppReceiver"
             android:enabled="true"
             android:exported="true">

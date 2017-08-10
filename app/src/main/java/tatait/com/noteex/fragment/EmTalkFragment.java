@@ -51,7 +51,6 @@ public class EmTalkFragment extends BaseFragment {
     private String conversationid = "";
     private EaseConversationAdapater adapter;
 
-    private static Context mContext;
     List<GsonUserModel.UserModel> listUser;
     private static long TALKTIME = 3000;
 
@@ -59,7 +58,6 @@ public class EmTalkFragment extends BaseFragment {
     protected void initView(Bundle savedInstanceState) {
         setContentView(R.layout.activity_em_conversation);
         listView = getViewById(R.id.listView);
-        mContext = getActivity();
     }
 
     @Override
@@ -85,7 +83,7 @@ public class EmTalkFragment extends BaseFragment {
                             }
                         }
                     }
-                    Intent intent = new Intent(mContext, EmChatActivity.class);
+                    Intent intent = new Intent(getActivity(), EmChatActivity.class);
                     intent.putExtra("username", username);
                     intent.putExtra("cickname", cickname);
                     intent.putExtra("imgurl", imgurl);
@@ -98,21 +96,21 @@ public class EmTalkFragment extends BaseFragment {
 
     @Override
     protected void processLogic(Bundle savedInstanceState) {
-        refreshGetData(mContext, false);
+        refreshGetData(false);
     }
 
     protected void onInvisibleToUser() {
-        refreshGetData(mContext, true);
+        refreshGetData(true);
     }
 
     protected void onVisibleToUser() {
-        refreshGetData(mContext, true);
+        refreshGetData(true);
     }
 
     /**
      * 点击刷新按钮
      */
-    public void refreshGetData(Context context, boolean timeLimit) {
+    public void refreshGetData(boolean timeLimit) {
         long a = (long) SharedPreferencesUtils.getParam(mApp, CommonUtil.EMTALKTIME, new Date().getTime());
         long b = new Date().getTime();
         SharedPreferencesUtils.setParam(mApp, CommonUtil.EMTALKTIME, b);
@@ -129,9 +127,6 @@ public class EmTalkFragment extends BaseFragment {
         } else {
             if (listView != null) listView.setVisibility(View.VISIBLE);
         }
-        mContext = context;
-
-        if (mContext == null) mContext = getActivity();
 
         conversationList.addAll(loadConversationList());
         getConversationUserData();
@@ -187,7 +182,7 @@ public class EmTalkFragment extends BaseFragment {
             switch (msg.what) {
                 case CommonUtil.conversationUserDataCode:
                     listUser = (List<GsonUserModel.UserModel>) msg.obj;
-                    adapter = new EaseConversationAdapater(mContext, 1, conversationList, listUser);
+                    adapter = new EaseConversationAdapater(getActivity(), 1, conversationList, listUser);
                     if (listView == null) {
                         listView = getViewById(R.id.listView);
                     }
@@ -266,6 +261,7 @@ public class EmTalkFragment extends BaseFragment {
         private List<EMConversation> copyConversationList;
         private List<GsonUserModel.UserModel> listUser;
         private boolean notiyfyByFilter;
+        private Context contextAdapter;
         private int primaryColor;
         private int secondaryColor;
         private int timeColor;
@@ -277,6 +273,7 @@ public class EmTalkFragment extends BaseFragment {
             super(context, resource, objects);
             conversationList = objects;
             listUser = list;
+            contextAdapter = context;
             copyConversationList = new ArrayList<>();
             copyConversationList.addAll(objects);
         }
@@ -302,7 +299,7 @@ public class EmTalkFragment extends BaseFragment {
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
-                convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_em_conversation, parent, false);
+                convertView = LayoutInflater.from(contextAdapter).inflate(R.layout.item_em_conversation, null);
             }
             ViewHolder holder = (ViewHolder) convertView.getTag();
             if (holder == null) {
@@ -324,9 +321,9 @@ public class EmTalkFragment extends BaseFragment {
                     if (username.equals(listUser.get(i).emid)) {
                         holder.name.setText("与 " + listUser.get(i).name + " 的会话");
                         if (StringUtils.isEmpty2(listUser.get(i).imgurl)) {
-                            Picasso.with(mContext).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                            Picasso.with(getActivity().getApplicationContext()).load(R.drawable.em_default_avatar).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                         } else {
-                            Picasso.with(mContext).load(listUser.get(i).imgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
+                            Picasso.with(getActivity().getApplicationContext()).load(listUser.get(i).imgurl).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(holder.avatar);
                         }
                     }
                 }

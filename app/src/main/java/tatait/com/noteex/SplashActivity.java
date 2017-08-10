@@ -3,6 +3,7 @@ package tatait.com.noteex;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -51,26 +52,21 @@ public class SplashActivity extends Activity implements SplashADListener {
         skipView = (TextView) findViewById(R.id.skip_view);
         splashHolder = (ImageView) findViewById(R.id.splash_holder);
         mContext = this;
-        CommonUtil.setPermissions(SplashActivity.this);//针对6.0系统动态获取权限
         OnlineConfigAgent.getInstance().updateOnlineConfig(getApplicationContext());
         OnlineConfigAgent.getInstance().setDebugMode(false);
-        //判断是否是第一次使用，是的话跳转引导页
-        String mtype = android.os.Build.MODEL; // 手机型号
-        if (!mtype.contains("Samsung Galaxy") && (Boolean) SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.ISFIRST, true)) {
-            startActivity(new Intent(mContext, GuideLightActivity.class));
-            finish();
-        } else {
-            new Thread(new Runnable() {
-                public void run() {
-                    if (EMClient.getInstance().isLoggedInBefore()) {
-                        // ** 免登陆情况 加载所有本地群和会话
-                        //不是必须的，不加sdk也会自动异步去加载(不会重复加载)；
-                        //加上的话保证进了主页面会话和群组都已经load完毕
-                        EMClient.getInstance().groupManager().loadAllGroups();
-                        EMClient.getInstance().chatManager().loadAllConversations();
-                    }
-                }
-            }).start();
+
+        if (Build.VERSION.SDK_INT >= 23) {
+            CommonUtil.setPermissions(SplashActivity.this);//针对6.0系统动态获取权限
+            //判断是否是第一次使用，是的话跳转引导页
+//            String mtype = android.os.Build.MODEL; // 手机型号
+//            if (!mtype.contains("Samsung Galaxy") && (Boolean) SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.ISFIRST, true)) {
+            if ((Boolean) SharedPreferencesUtils.getParam(getApplicationContext(), CommonUtil.ISFIRST, true)) {
+                startActivity(new Intent(mContext, GuideLightActivity.class));
+                finish();
+            } else {
+                initData();
+            }
+        }else{
             initData();
         }
     }
@@ -95,7 +91,7 @@ public class SplashActivity extends Activity implements SplashADListener {
                             if (gsonModel != null && gsonModel.getData() != null & gsonModel.getData().size() > 0) {
                                 //获取首页图片和广告
 //                  if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getMainImg())) {
-//                    Picasso.with(mContext).load(gsonModel.getData().get(0).getMainImg()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(welcome_activity_img);
+//                    Picasso.with(mContext.getApplicationContext()).load(gsonModel.getData().get(0).getMainImg()).placeholder(new ColorDrawable(Color.parseColor("#f5f5f5"))).into(welcome_activity_img);
 //                  }
                                 //判断是否强制更新
                                 if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getMustUpdate())) {
@@ -103,6 +99,11 @@ public class SplashActivity extends Activity implements SplashADListener {
                                 }
                                 if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getAdLink())) {
                                     link = gsonModel.getData().get(0).getAdLink();
+                                    SharedPreferencesUtils.setParam(mContext,"link",link);
+                                }
+                                if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getIsOpen())) {
+                                    SharedPreferencesUtils.setParam(mContext,"isOpen",gsonModel.getData().get(0).getIsOpen());
+                                    SharedPreferencesUtils.setParam(mContext,"vip",gsonModel.getData().get(0).getVip());
                                 }
                                 //判断版本信息
                                 String android_version = gsonModel.getData().get(0).getAndroid_version();
@@ -135,6 +136,7 @@ public class SplashActivity extends Activity implements SplashADListener {
                                 }
                                 if (!StringUtils.isEmpty2(gsonModel.getData().get(0).getAdLink())) {
                                     link = gsonModel.getData().get(0).getAdLink();
+                                    SharedPreferencesUtils.setParam(mContext,"link",link);
                                 }
                                 //判断版本信息
                                 String android_version = gsonModel.getData().get(0).getAndroid_version();

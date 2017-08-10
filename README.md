@@ -1,19 +1,19 @@
 # NoteEx
 
-### è¶…çº§ç¬”è®°Androidå®¢æˆ·ç«¯  
-### åŸºäºŽMaterial Designè®¾è®¡æ¨¡å¼ã€åµŒæœ‰è½»é‡çº§çš„IMæ¡†æž¶ï¼ˆçŽ¯ä¿¡ï¼‰
+### ³¬¼¶±Ê¼ÇAndroid¿Í»§¶Ë  
+### »ùÓÚMaterial DesignÉè¼ÆÄ£Ê½¡¢Ç¶ÓÐÇáÁ¿¼¶µÄIM¿ò¼Ü£¨»·ÐÅ£©
 
-## æ•ˆæžœå›¾
+## Ð§¹ûÍ¼
 
-### æ•´ä½“æ•ˆæžœ
+### ÕûÌåÐ§¹û
 
 <img src="/screen/main.gif" title="" width="270" height="486" /> <br>
 
-### å®žéªŒå®¤æ•ˆæžœï¼šåœ¨çº¿å’Œæœ¬åœ°æ¢è‚¤ã€åœ¨çº¿å’Œæœ¬åœ°å­—ä½“æ›´æ¢
+### ÊµÑéÊÒÐ§¹û£ºÔÚÏßºÍ±¾µØ»»·ô¡¢ÔÚÏßºÍ±¾µØ×ÖÌå¸ü»»
 
 <img src="/screen/second.gif" title="" width="270" height="486" /> <br>
 
-### å…¶ä»–åŠŸèƒ½æ•ˆæžœ
+### ÆäËû¹¦ÄÜÐ§¹û
 <img src="http://omzogcv8w.bkt.clouddn.com/user.png" width="270" height="486" title=""><br>
 
 <img src="http://omzogcv8w.bkt.clouddn.com/tag.png" width="270" height="486" title="">
@@ -26,13 +26,13 @@
 
 <img src="http://omzogcv8w.bkt.clouddn.com/setting.png" width="270" height="486" title="">
 
-## æ•°æ®æ¥æºAPIæŽ¥å£ ##
+## Êý¾ÝÀ´Ô´API½Ó¿Ú ##
 
-### 1. æ•°æ®æ˜¯è‡ªå·±å†™çš„åŽå°ï¼ŒåŽå°æ­å»ºåœ¨LeanCloudã€éžå¹¿å‘Šï¼šè¿™æ˜¯å…è´¹çš„è½»é‡çº§åŽå°ç®¡ç†ç»´æŠ¤ç³»ç»Ÿï¼Œå¯ä»¥åŸºäºŽJavaã€PHPç­‰è¯­è¨€ï¼Œå…·ä½“ä¿¡æ¯è¯·ç§»æ­¥å®˜ç½‘ï¼šhttps://leancloud.cn/ã€‘
+### 1. Êý¾ÝÊÇ×Ô¼ºÐ´µÄºóÌ¨£¬ºóÌ¨´î½¨ÔÚLeanCloud¡¾·Ç¹ã¸æ£ºÕâÊÇÃâ·ÑµÄÇáÁ¿¼¶ºóÌ¨¹ÜÀíÎ¬»¤ÏµÍ³£¬¿ÉÒÔ»ùÓÚJava¡¢PHPµÈÓïÑÔ£¬¾ßÌåÐÅÏ¢ÇëÒÆ²½¹ÙÍø£ºhttps://leancloud.cn/¡¿
 
-éƒ¨åˆ†æŽ¥å£ç¤ºä¾‹:ã€æ›´å¤šä¿¡æ¯ï¼Œå¯ä»¥è®¿é—®æˆ‘å½“æ—¶å¼€å‘å¦ä¸€ä¸ªé¡¹ç›®ä½¿ç”¨çš„APIæ–‡æ¡£ï¼Œæœ¬é¡¹ç›®ä¹Ÿæ˜¯æŒ‚è½½åœ¨è¿™ä¸ªæ•°æ®åº“é‡Œï¼ˆæ‡’å¾—æ–°å»ºå•¦ ^_^ ï¼‰https://lynn01247.gitbooks.io/turtle_api_1-0/content/ã€‘
+²¿·Ö½Ó¿ÚÊ¾Àý:¡¾¸ü¶àÐÅÏ¢£¬¿ÉÒÔ·ÃÎÊÎÒµ±Ê±¿ª·¢ÁíÒ»¸öÏîÄ¿Ê¹ÓÃµÄAPIÎÄµµ£¬±¾ÏîÄ¿Ò²ÊÇ¹ÒÔØÔÚÕâ¸öÊý¾Ý¿âÀï£¨ÀÁµÃÐÂ½¨À² ^_^ £©https://lynn01247.gitbooks.io/turtle_api_1-0/content/¡¿
 -----------------------------------------------------------------------------
-// æ ¹æ®pageèŽ·å–å…¨éƒ¨ç¬”è®°ä¿¡æ¯
+// ¸ù¾Ýpage»ñÈ¡È«²¿±Ê¼ÇÐÅÏ¢
 $turtle_api->get('/getNote', function(Request $request, Response $response) {
     if(empty($_REQUEST['pageIndex'])){
       $pageIndex = 1;
@@ -41,7 +41,7 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
     }
     // ....
     // ....
-    //åˆ¤æ–­ç”¨æˆ·çš„ä¼šè¯tokenæ˜¯å¦è¿˜æœ‰æ•ˆ
+    //ÅÐ¶ÏÓÃ»§µÄ»á»°tokenÊÇ·ñ»¹ÓÐÐ§
     $uidQueryUsers   = new Query("Users");
     $uidQueryUsers->equalTo("uid", intval($uid));
 
@@ -54,10 +54,10 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
     } catch (CloudException $ex) {
       return json_encode(array(
         "code"     => 0,
-        "info"     => "èŽ·å–å…¨éƒ¨ç¬”è®°è‡ªæ£€å¤±è´¥! å¼‚å¸¸ä¿¡æ¯: ".$ex
+        "info"     => "»ñÈ¡È«²¿±Ê¼Ç×Ô¼ìÊ§°Ü! Òì³£ÐÅÏ¢: ".$ex
       ));
     }
-    if ($countUidToken > 0) {// ç”¨æˆ·çš„ä¼šè¯tokenæœ‰æ•ˆ
+    if ($countUidToken > 0) {// ÓÃ»§µÄ»á»°tokenÓÐÐ§
       try {
           //.....
 	  //...
@@ -77,7 +77,7 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
       }
       return json_encode(array(
         "code"     => 1,
-        "info"     => "æŸ¥è¯¢æˆåŠŸ!",
+        "info"     => "²éÑ¯³É¹¦!",
         "data"     => $data,
         "page"     => $pageIndex,
         "pageSize" => $pageSize,
@@ -86,26 +86,26 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
     }else{
       return json_encode(array(
         "code"     => 0,
-        "info"     => "ç”¨æˆ·tokenæ— æ•ˆ!è¯·é‡æ–°ç™»é™†éªŒè¯tokenä¿¡æ¯!"
+        "info"     => "ÓÃ»§tokenÎÞÐ§!ÇëÖØÐÂµÇÂ½ÑéÖ¤tokenÐÅÏ¢!"
       ));
     }
 });
 -----------------------------------------------------------------------------
 
-## 2. éƒ¨åˆ†å¹²è´§æ•°æ®æ˜¯åŸºäºŽPHPçˆ¬è™«å®žçŽ°ï¼Œå½“ç”¨æˆ·è®¿é—®APPè¯·æ±‚æœ€æ–°æ•°æ®æ—¶ï¼Œè‡ªåŠ¨åŽ»æŠ“å–ã€æŽ˜é‡‘ã€‘æœ€æ–°çš„æ•°æ®ã€‚éƒ¨åˆ†å›¾ç‰‡æ•°æ®å’Œä¸»é¢˜å­—ä½“ç­‰å­˜äºŽä¸ƒç‰›
-## 3. ç”±äºŽæŽ˜é‡‘å¯¹æŽ¥å£è®¿é—®é‡‡ç”¨ã€X-LC-Idã€‘ + ã€X-LC-Signã€‘è®¤è¯æ–¹å¼ï¼Œå› æ­¤æˆ‘å°†Signæç½®äºŽå‹ç›Ÿåœ¨çº¿å‚æ•°ã€‚
+## 2. ²¿·Ö¸É»õÊý¾ÝÊÇ»ùÓÚPHPÅÀ³æÊµÏÖ£¬µ±ÓÃ»§·ÃÎÊAPPÇëÇó×îÐÂÊý¾ÝÊ±£¬×Ô¶¯È¥×¥È¡¡¾¾ò½ð¡¿×îÐÂµÄÊý¾Ý¡£²¿·ÖÍ¼Æ¬Êý¾ÝºÍÖ÷Ìâ×ÖÌåµÈ´æÓÚÆßÅ£
+## 3. ÓÉÓÚ¾ò½ð¶Ô½Ó¿Ú·ÃÎÊ²ÉÓÃ¡¾X-LC-Id¡¿ + ¡¾X-LC-Sign¡¿ÈÏÖ¤·½Ê½£¬Òò´ËÎÒ½«Sign¸éÖÃÓÚÓÑÃËÔÚÏß²ÎÊý¡£
 
-ç¬”è®°Modelçš„æ•°æ®Jsonæ ¼å¼:
+±Ê¼ÇModelµÄÊý¾ÝJson¸ñÊ½:
 ```
-"code": 1,           //è¿”å›žå€¼,
-"info": "æŸ¥è¯¢æˆåŠŸ!", //è¿”å›žæç¤º,
+"code": 1,           //·µ»ØÖµ,
+"info": "²éÑ¯³É¹¦!", //·µ»ØÌáÊ¾,
 [
     {
         "uid": 1,
         "nid": 1,
         "treeid": "1",
-        "title": "æ ‡é¢˜",
-        "content": "å†…å®¹",
+        "title": "±êÌâ",
+        "content": "ÄÚÈÝ",
         "updatedTime": "2017-4-12 10:00:00"
 	...
     },
@@ -114,8 +114,8 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
         "uid": 2,
         "nid": 2,
         "treeid": "2",
-        "title": "æ ‡é¢˜2",
-        "content": "å†…å®¹2",
+        "title": "±êÌâ2",
+        "content": "ÄÚÈÝ2",
         "updatedTime": "2017-4-12 11:00:00"
 	...
     }
@@ -125,34 +125,35 @@ $turtle_api->get('/getNote', function(Request $request, Response $response) {
 "total":1
 ```
 
-## åŠŸèƒ½ç‚¹è®°å½•ï¼š
-- Material Design é¡µé¢è·³è½¬åŠ¨ç”»ï¼Œè§¦æ‘¸å“åº”å’Œå…±äº«å…ƒç´ è½¬åœºåŠ¨ç”»
-- ä¾§è¾¹æ åŠ¨ç”»æ•ˆæžœï¼šActionBarDrawerToggleã€DrawerLayoutã€ToolBar çš„ç»“åˆ
-- RecycleView + BGARefreshLayout ä¸‹æ‹‰åˆ·æ–°ä¸Šæ‹‰åŠ è½½
-- DrawerLayout å®žçŽ°æŠ½å±‰èœå•
-- Navigation å®žçŽ°æŠ½å±‰å·¦è¾¹çš„å¯¼èˆª
-- ToolBar å®žçŽ°æ²‰æµ¸å¼å¸ƒå±€
-- ViewPager å±•ç¤ºè½®æ’­å›¾ç‰‡ï¼ˆé¦–å°¾å¾ªçŽ¯ï¼Œè‡ªåŠ¨è½®æ’­ï¼‰
-- okhttp å°è£…è¯·æ±‚ å¼‚æ­¥èŽ·å– Jsonæ•°æ®
-- skin åœ¨çº¿æ¢è‚¤å’Œæ¢å­—ä½“ã€å½“ç„¶ä¹Ÿæ”¯æŒæœ¬åœ°ã€‘
-- å¤šdimens é€‚é…å¤§éƒ¨åˆ†ç³»ç»Ÿ
-- CircleView åœ†å½¢å¤´åƒ
-- æ”¯æŒä¸‰æ–¹ç™»å½•ã€å¾®ä¿¡ã€QQã€æ–°æµªã€‘ï¼Œä½¿ç”¨çš„æ˜¯å‹ç›Ÿ
-- æ”¯æŒä¸‰æ–¹åˆ†äº«ã€å¾®ä¿¡(å«æœ‹å‹åœˆ/å¾®ä¿¡æ”¶è—)ã€QQ(å«ç©ºé—´)ã€æ–°æµªã€çŸ­ä¿¡ã€é‚®ä»¶ã€æ–‡æœ¬ã€é“¾æŽ¥ç­‰ ã€‘
-- HtextView å­—ä½“ç‰¹æ•ˆ
-- è½»é‡çº§çŽ¯ä¿¡èŠå¤©ï¼Œå®žæ—¶çº¢ç‚¹ä¿¡æ¯æé†’
-- è‡ªä¸»æå–å°è£…çš„aar é˜²æ­¢Moduleè¿‡å¤šç´¯èµ˜
-- é›†æˆå‹ç›ŸæŽ¨é€
+## ¹¦ÄÜµã¼ÇÂ¼£º
+- Material Design Ò³ÃæÌø×ª¶¯»­£¬´¥ÃþÏìÓ¦ºÍ¹²ÏíÔªËØ×ª³¡¶¯»­
+- ²à±ßÀ¸¶¯»­Ð§¹û£ºActionBarDrawerToggle¡¢DrawerLayout¡¢ToolBar µÄ½áºÏ
+- RecycleView + BGARefreshLayout ÏÂÀ­Ë¢ÐÂÉÏÀ­¼ÓÔØ
+- DrawerLayout ÊµÏÖ³éÌë²Ëµ¥
+- Navigation ÊµÏÖ³éÌë×ó±ßµÄµ¼º½
+- ToolBar ÊµÏÖ³Á½þÊ½²¼¾Ö
+- ViewPager Õ¹Ê¾ÂÖ²¥Í¼Æ¬£¨Ê×Î²Ñ­»·£¬×Ô¶¯ÂÖ²¥£©
+- okhttp ·â×°ÇëÇó Òì²½»ñÈ¡ JsonÊý¾Ý
+- skin ÔÚÏß»»·ôºÍ»»×ÖÌå¡¾µ±È»Ò²Ö§³Ö±¾µØ¡¿
+- ¶àdimens ÊÊÅä´ó²¿·ÖÏµÍ³
+- CircleView Ô²ÐÎÍ·Ïñ
+- Ö§³ÖÈý·½µÇÂ¼¡¾Î¢ÐÅ¡¢QQ¡¢ÐÂÀË¡¿£¬Ê¹ÓÃµÄÊÇÓÑÃË
+- Ö§³ÖÈý·½·ÖÏí¡¾Î¢ÐÅ(º¬ÅóÓÑÈ¦/Î¢ÐÅÊÕ²Ø)¡¢QQ(º¬¿Õ¼ä)¡¢ÐÂÀË¡¢¶ÌÐÅ¡¢ÓÊ¼þ¡¢ÎÄ±¾¡¢Á´½ÓµÈ ¡¿
+- HtextView ×ÖÌåÌØÐ§
+- ÇáÁ¿¼¶»·ÐÅÁÄÌì£¬ÊµÊ±ºìµãÐÅÏ¢ÌáÐÑ
+- ×ÔÖ÷ÌáÈ¡·â×°µÄaar ·ÀÖ¹Module¹ý¶àÀÛ×¸
+- ¼¯³ÉÓÑÃËÍÆËÍ
+- ¼¯³ÉÌÚÑ¶bugly¼à²âºÍÓ¦ÓÃÉý¼¶¿ò¼Ü 
 
-## éƒ¨åˆ†ä¾èµ–çš„å¼€æºåº“å’Œå·¥å…·
+## ²¿·ÖÒÀÀµµÄ¿ªÔ´¿âºÍ¹¤¾ß
 
-ä¸‹æ‹‰åˆ·æ–°ä¸Šæ‹‰åŠ è½½[BGARefreshLayout](https://github.com/ylligang118/BGARefreshLayout-Android)
+ÏÂÀ­Ë¢ÐÂÉÏÀ­¼ÓÔØ[BGARefreshLayout](https://github.com/ylligang118/BGARefreshLayout-Android)
 
-ç½‘ç»œè¯·æ±‚[okhttp](æŠ€æœ¯åšå®¢:http://blog.csdn.net/lmj623565791/article/details/47911083)
+ÍøÂçÇëÇó[okhttp](¼¼Êõ²©¿Í:http://blog.csdn.net/lmj623565791/article/details/47911083)
 
-å¼ºå¤§çš„å›¾ç‰‡å¤„ç†å·¥å…·[picasso](https://github.com/square/picasso)
+Ç¿´óµÄÍ¼Æ¬´¦Àí¹¤¾ß[picasso](https://github.com/square/picasso)
 
-ç‚«é…·çš„æ–‡å­—ç‰¹æ•ˆ[htextview](https://github.com/hanks-zyh/HTextView)ä¸è¿‡ï¼šminSdkVersionè¦15
+ìÅ¿áµÄÎÄ×ÖÌØÐ§[htextview](https://github.com/hanks-zyh/HTextView)²»¹ý£ºminSdkVersionÒª15
 
-ä¸»é¢˜åˆ‡æ¢ä¸€ç›´æ˜¯ä¸ªåŠŸèƒ½è¦ç‚¹ï¼Œç½‘ä¸Šæœ‰è®¸è®¸å¤šå¤šçš„æ–¹å¼ï¼Œä¸æ˜¯æ“ä½œå¤ªå¤æ‚ï¼Œæ‰¹é‡æ›´æ¢ï¼›å°±æ˜¯æ•ˆæžœä¸å¦‚æ„ã€‚
-æ‰¾äº†ä¸ªæ¯”è¾ƒæ»¡æ„çš„[ThemeSkinning](https://github.com/burgessjp/ThemeSkinning)
+Ö÷ÌâÇÐ»»Ò»Ö±ÊÇ¸ö¹¦ÄÜÒªµã£¬ÍøÉÏÓÐÐíÐí¶à¶àµÄ·½Ê½£¬²»ÊÇ²Ù×÷Ì«¸´ÔÓ£¬ÅúÁ¿¸ü»»£»¾ÍÊÇÐ§¹û²»ÈçÒâ¡£
+ÕÒÁË¸ö±È½ÏÂúÒâµÄ[ThemeSkinning](https://github.com/burgessjp/ThemeSkinning)

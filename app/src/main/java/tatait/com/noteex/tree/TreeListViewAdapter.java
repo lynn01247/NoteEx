@@ -36,6 +36,11 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
         void onClick(Node node, int position);
     }
 
+    @Override
+    public void notifyDataSetChanged() {
+        super.notifyDataSetChanged();
+    }
+
     public void setOnTreeNodeClickListener(
             OnTreeNodeClickListener onTreeNodeClickListener) {
         this.onTreeNodeClickListener = onTreeNodeClickListener;
@@ -124,7 +129,6 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
         return convertView;
     }
 
-    public abstract View getConvertView(Node node, int position,
-                                        View convertView, ViewGroup parent);
+    public abstract View getConvertView(Node node, int position,View convertView, ViewGroup parent);
 
 }
